@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life, Ambition, and Competence Blog</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        /* Default CSS Variables (Tokyo Night Dark) */
+        :root {
+            --c-light: #1A1B26;
+            --c-lightgray: #24283B;
+            --c-gray: #414868;
+            --c-darkgray: #C0CAF5; /* Title/Header Text */
+            --c-dark: #A9B1D6; /* Main Text */
+            --c-secondary: #7DCFFF; /* Link/Accent */
+            --c-tertiary: #16161E; /* Primary Code/Protocol Block Background */
+            --c-highlight: #353A52; /* Blockquote BG */
+            --c-textHighlight: #9ECE6A; /* Code Keyword Text / Success Button BG */
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            transition: background-color 0.4s, color 0.4s;
+            background-color: var(--c-light);
+            color: var(--c-dark);
+        }
+
+        /* General Theme Classes */
+        .themed-bg { background-color: var(--c-light); }
+        .themed-card-bg { background-color: var(--c-lightgray); }
+        .themed-text { color: var(--c-dark); }
+        .themed-title { color: var(--c-darkgray); }
+        .themed-subtitle { color: var(--c-secondary); }
+        .themed-link { color: var(--c-secondary); }
+        .themed-highlight-bg { background-color: var(--c-highlight); }
+        .themed-border { border-color: var(--c-gray); }
+        .themed-dropdown {
+            background-color: var(--c-lightgray);
+            color: var(--c-dark);
+            border: 1px solid var(--c-gray);
+        }
+        .themed-button {
+            background-color: var(--c-highlight);
+            color: var(--c-darkgray);
+            border: 1px solid var(--c-gray);
+        }
+
+        /* Quartz Specific Styling */
+        .quartz-shadow {
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05), 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Renamed formula-block to code-block for clarity */
+        .code-block {
+            background-color: var(--c-tertiary);
+            color: var(--c-dark);
+        }
+
+        .code-line {
+            display: block;
+            margin-bottom: 0.5rem;
+            white-space: pre;
+        }
+
+        /* Specific content styling for the blog posts */
+        .article-content > * {
+            margin-bottom: 1.5rem; /* Add consistent spacing for all content inside the article */
+        }
+        .article-content p, .article-content li {
+            line-height: 1.8;
+            color: var(--c-dark);
+        }
+        .article-content h2 {
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--c-darkgray);
+            font-size: 1.875rem; /* 3xl */
+            font-weight: 700;
+        }
+        .article-content h3 {
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
+            color: var(--c-darkgray);
+            font-size: 1.25rem; /* xl */
+            font-weight: 700;
+        }
+        .article-content ul {
+            list-style: disc;
+            padding-left: 1.5rem;
+        }
+        .article-content pre {
+            white-space: pre-wrap;
+            word-break: break-all;
+        }
+
+
+        /* Sidebar interaction */
+        .sidebar-link {
+            display: block;
+            padding: 0.5rem 0;
+            cursor: pointer;
+            transition: opacity 0.15s;
+        }
+        .sidebar-link:hover {
+            opacity: 0.8;
+        }
+        .sidebar-item.active {
+            padding: 0.5rem;
+            border-radius: 0.5rem;
+            background-color: var(--c-highlight);
+            border-left-width: 4px;
+            border-left-style: solid;
+            border-left-color: var(--c-secondary);
+        }
+        .sidebar-item.active .sidebar-link {
+             color: var(--c-darkgray);
+             font-weight: 700;
+             padding: 0; /* padding is on the item now */
+        }
+        .sidebar-item:not(.active) .sidebar-link {
+            color: var(--c-secondary);
+        }
+
+        /* Sticky sidebar on desktop */
+        @media (min-width: 1024px) {
+            .sidebar {
+                position: sticky;
+                top: 20px;
+                height: calc(100vh - 40px);
+                overflow-y: auto;
+            }
+        }
+
+        /* Fixed position for the palette button on the content page */
+        #palette-button-container {
+            position: absolute;
+            top: 24px; /* Matches p-6 padding */
+            right: 24px; /* Matches p-6 padding */
+        }
+        @media (min-width: 768px) {
+            #palette-button-container {
+                top: 48px; /* Matches p-12 padding */
+                right: 48px; /* Matches p-12 padding */
+            }
+        }
+    </style>
+</head>
+<body class="p-0 md:p-5 min-h-screen themed-text">
+
+    <!-- Theme Data with Light/Dark Modes - (30 Themes) -->
+    <script id="theme-data" type="application/json">
+        {
+          "colors": {
+            "TokyoNight": {
+                "darkMode": { "light": "#1A1B26", "lightgray": "#24283B", "gray": "#414868", "darkgray": "#C0CAF5", "dark": "#A9B1D6", "secondary": "#7DCFFF", "tertiary": "#16161E", "highlight": "#353A52", "textHighlight": "#9ECE6A" },
+                "lightMode": { "light": "#FFFFFF", "lightgray": "#F3F4F6", "gray": "#9CA3AF", "darkgray": "#1F2937", "dark": "#374151", "secondary": "#10B981", "tertiary": "#F9FAFB", "highlight": "#E5E7EB", "textHighlight": "#9333EA" }
+            },
+            "CatppuccinMocha": {
+                "darkMode": { "light": "#1E1E2E", "lightgray": "#313244", "gray": "#585B70", "darkgray": "#CBA6F7", "dark": "#CDD6F4", "secondary": "#F38BA8", "tertiary": "#181825", "highlight": "#45475A", "textHighlight": "#A6E3A1" },
+                "lightMode": { "light": "#EFF1F5", "lightgray": "#E6E9ED", "gray": "#939AB7", "darkgray": "#4C4F69", "dark": "#4C4F69", "secondary": "#D20F39", "tertiary": "#C6D0F5", "highlight": "#DCE0E8", "textHighlight": "#40A02B" }
+            },
+            "Everforest": {
+                "darkMode": { "light": "#323D43", "lightgray": "#3F514F", "gray": "#7A8478", "darkgray": "#D3C6AA", "dark": "#A7C080", "secondary": "#E67E80", "tertiary": "#272F33", "highlight": "#47504F", "textHighlight": "#83C092" },
+                "lightMode": { "light": "#FCFCFA", "lightgray": "#F0EDE4", "gray": "#A6A69C", "darkgray": "#5C6A72", "dark": "#5C6A72", "secondary": "#499573", "tertiary": "#836e2fff", "highlight": "#E6E2D0", "textHighlight": "#D69987" }
+            },
+            "Gruvbox": {
+                "darkMode": { "light": "#282828", "lightgray": "#3C3836", "gray": "#928374", "darkgray": "#EBDBB2", "dark": "#D5C4A1", "secondary": "#FE8019", "tertiary": "#1D2021", "highlight": "#504945", "textHighlight": "#B8BB26" },
+                "lightMode": { "light": "#FBF1C7", "lightgray": "#F2E5BC", "gray": "#928374", "darkgray": "#3C3836", "dark": "#665C54", "secondary": "#D65D0E", "tertiary": "#F5E9D0", "highlight": "#EBCB8B", "textHighlight": "#98971A" }
+            },
+            "Kanagawa": {
+                "darkMode": { "light": "#1F1F28", "lightgray": "#2A2A37", "gray": "#545468", "darkgray": "#C8C093", "dark": "#DCD7BA", "secondary": "#7FB4CA", "tertiary": "#16161E", "highlight": "#3D4355", "textHighlight": "#E6C384" },
+                "lightMode": { "light": "#F5F3FF", "lightgray": "#E8E6FF", "gray": "#B4B1B7", "darkgray": "#56555C", "dark": "#7C777C", "secondary": "#7FB4CA", "tertiary": "#FFFFFF", "highlight": "#DAD8DD", "textHighlight": "#B55A38" }
+            },
+            "Nord": {
+                "darkMode": { "light": "#2E3440", "lightgray": "#3B4252", "gray": "#4C566A", "darkgray": "#88C0D0", "dark": "#D8DEE9", "secondary": "#A3BE8C", "tertiary": "#242933", "highlight": "#434C5E", "textHighlight": "#BF616A" },
+                "lightMode": { "light": "#ECEFF4", "lightgray": "#D8DEE9", "gray": "#A5B2C6", "darkgray": "#4C566A", "dark": "#4C566A", "secondary": "#5E81AC", "tertiary": "#E5E9F0", "highlight": "#B48EAD", "textHighlight": "#8FBCBB" }
+            },
+            "MatteBlack": {
+                "darkMode": { "light": "#000000", "lightgray": "#1A1A1A", "gray": "#444444", "darkgray": "#E0E0E0", "dark": "#B0B0B0", "secondary": "#00CED1", "tertiary": "#050505", "highlight": "#222222", "textHighlight": "#FFD700" },
+                "lightMode": { "light": "#FFFFFF", "lightgray": "#F0F0F0", "gray": "#A0A0A0", "darkgray": "#202020", "dark": "#303030", "secondary": "#4682B4", "tertiary": "#FAFAFA", "highlight": "#E0E0E0", "textHighlight": "#FF6347" }
+            },
+            "RosePine": {
+                "darkMode": { "light": "#191724", "lightgray": "#21202E", "gray": "#6E6A86", "darkgray": "#E0DEF4", "dark": "#EDECEF", "secondary": "#eb6f92", "tertiary": "#13111B", "highlight": "#3E3C57", "textHighlight": "#F6C177" },
+                "lightMode": { "light": "#FAF4ED", "lightgray": "#F2F0EC", "gray": "#9893A5", "darkgray": "#575268", "dark": "#6F6C7D", "secondary": "#D7827E", "tertiary": "#FFFDFB", "highlight": "#FBE6D3", "textHighlight": "#907AA9" }
+            },
+            "OsakaJade": {
+                "darkMode": { "light": "#0B0C10", "lightgray": "#1D1F23", "gray": "#4A4D53", "darkgray": "#A8A8A8", "dark": "#E0E0E0", "secondary": "#00A39E", "tertiary": "#050608", "highlight": "#2A2C31", "textHighlight": "#00FF7F" },
+                "lightMode": { "light": "#FFFFFF", "lightgray": "#F0F0F0", "gray": "#AAAAAA", "darkgray": "#222222", "dark": "#444444", "secondary": "#008B8B", "tertiary": "#FAFAFA", "highlight": "#E0E0E0", "textHighlight": "#3CB371" }
+            },
+            "Aura": {
+                "darkMode": { "light": "#21213E", "lightgray": "#2A2A49", "gray": "#535384", "darkgray": "#A277FF", "dark": "#FFFAF4", "secondary": "#61FFCA", "tertiary": "#1B1B30", "highlight": "#3C3C6B", "textHighlight": "#F69D51" },
+                "lightMode": { "light": "#FFFFFF", "lightgray": "#F3F3FF", "gray": "#AAAAEE", "darkgray": "#535384", "dark": "#6A5ACD", "secondary": "#FF5733", "tertiary": "#FDFDFF", "highlight": "#E0E0FF", "textHighlight": "#61FFCA" }
+            },
+            "Dracula": {
+                "darkMode": { "light": "#282A36", "lightgray": "#44475A", "gray": "#6272A4", "darkgray": "#F8F8F2", "dark": "#BD93F9", "secondary": "#50FA7B", "tertiary": "#191A21", "highlight": "#383A4A", "textHighlight": "#FF79C6" },
+                "lightMode": { "light": "#FFFFFF", "lightgray": "#F0F0F0", "gray": "#A0A0A0", "darkgray": "#44475A", "dark": "#6272A4", "secondary": "#FF79C6", "tertiary": "#F5F5F5", "highlight": "#E0E0E0", "textHighlight": "#50FA7B" }
+            },
+            "SolarizedDark": {
+                "darkMode": { "light": "#002B36", "lightgray": "#073642", "gray": "#586E75", "darkgray": "#93A1A1", "dark": "#839496", "secondary": "#268BD2", "tertiary": "#00212B", "highlight": "#0A4250", "textHighlight": "#B58900" },
+                "lightMode": { "light": "#FDF6E3", "lightgray": "#EEE8D5", "gray": "#839496", "darkgray": "#586E75", "dark": "#657B83", "secondary": "#268BD2", "tertiary": "#FCF6E0", "highlight": "#EDEDD5", "textHighlight": "#DC322F" }
+            },
+            "MonokaiPro": {
+                "darkMode": { "light": "#2D2A2E", "lightgray": "#3A3731", "gray": "#6C6A6E", "darkgray": "#FC9867", "dark": "#F8F8F2", "secondary": "#FF6188", "tertiary": "#201E22", "highlight": "#454148", "textHighlight": "#A9DC76" },
+                "lightMode": { "light": "#FAFAF6", "lightgray": "#E8E8E8", "gray": "#B4B4B4", "darkgray": "#3D3A3A", "dark": "#6C6A6E", "secondary": "#FF6188", "tertiary": "#F5F5F0", "highlight": "#EBCB8B", "textHighlight": "#A9DC76" }
+            },
+            "OneDarkPro": {
+                "darkMode": { "light": "#282C34", "lightgray": "#323842", "gray": "#5C6370", "darkgray": "#E06C75", "dark": "#ABB2BF", "secondary": "#61AFEF", "tertiary": "#21252B", "highlight": "#3E4452", "textHighlight": "#98C379" },
+                "lightMode": { "light": "#FAFAFA", "lightgray": "#F4F4F4", "gray": "#A0A4B0", "darkgray": "#282C34", "dark": "#3F4756", "secondary": "#5C6BC0", "tertiary": "#FDFDFD", "highlight": "#EDEDF0", "textHighlight": "#98C379" }
+            },
+            "AyuMirage": {
+                "darkMode": { "light": "#1A1F26", "lightgray": "#242D38", "gray": "#676F7C", "darkgray": "#FFC777", "dark": "#C5C5C5", "secondary": "#70B4B0", "tertiary": "#12151A", "highlight": "#334151", "textHighlight": "#96E072" },
+                "lightMode": { "light": "#F8F9FA", "lightgray": "#F0F2F4", "gray": "#C0C5CC", "darkgray": "#1A1F26", "dark": "#4C5562", "secondary": "#689D6A", "tertiary": "#F5F6F8", "highlight": "#E3E6E8", "textHighlight": "#FF7A5C" }
+            },
+            "Andromeda": {
+                "darkMode": { "light": "#2D303D", "lightgray": "#34384B", "gray": "#5D616F", "darkgray": "#C574F2", "dark": "#D6D6D6", "secondary": "#F07178", "tertiary": "#252834", "highlight": "#4B5065", "textHighlight": "#98C379" },
+                "lightMode": { "light": "#F8F9FA", "lightgray": "#F0F2F4", "gray": "#C0C5CC", "darkgray": "#2D303D", "dark": "#4C5562", "secondary": "#689D6A", "tertiary": "#F5F6F8", "highlight": "#E3E6E8", "textHighlight": "#C574F2" }
+            },
+            "Palenight": {
+                "darkMode": { "light": "#292D3E", "lightgray": "#444B6A", "gray": "#8796B0", "darkgray": "#C792EA", "dark": "#A6ACCD", "secondary": "#FFCB6B", "tertiary": "#212530", "highlight": "#363A53", "textHighlight": "#C3E88D" },
+                "lightMode": { "light": "#FFFFFF", "lightgray": "#F0F0F0", "gray": "#9CA3AF", "darkgray": "#292D3E", "dark": "#444B6A", "secondary": "#FFCB6B", "tertiary": "#F9FAFB", "highlight": "#E5E7EB", "textHighlight": "#C792EA" }
+            },
+            "Outrun": {
+                "darkMode": { "light": "#1D1E3E", "lightgray": "#3A1B40", "gray": "#7D4E8A", "darkgray": "#FFC2FF", "dark": "#DCD7BA", "secondary": "#FF5D95", "tertiary": "#161633", "highlight": "#572B62", "textHighlight": "#00FFFF" },
+                "lightMode": { "light": "#FFFFFF", "lightgray": "#F0F0F0", "gray": "#AAAAAA", "darkgray": "#1D1E3E", "dark": "#444444", "secondary": "#FF5D95", "tertiary": "#FAFAFA", "highlight": "#E0E0E0", "textHighlight": "#FFC2FF" }
+            },
+            "Horizon": {
+                "darkMode": { "light": "#1C1E26", "lightgray": "#242630", "gray": "#78809A", "darkgray": "#FADAD1", "dark": "#E7C5A3", "secondary": "#E95678", "tertiary": "#14161C", "highlight": "#3B3F51", "textHighlight": "#A89966" },
+                "lightMode": { "light": "#FAFAFA", "lightgray": "#F0F0F0", "gray": "#AAAAAA", "darkgray": "#1C1E26", "dark": "#444444", "secondary": "#E95678", "tertiary": "#FDFDFD", "highlight": "#E0E0E0", "textHighlight": "#A89966" }
+            },
+            "Midnight": {
+                "darkMode": { "light": "#000033", "lightgray": "#000066", "gray": "#333399", "darkgray": "#CCCCFF", "dark": "#B3B3FF", "secondary": "#FFCC00", "tertiary": "#00001A", "highlight": "#1A1A4D", "textHighlight": "#66FF66" },
+                "lightMode": { "light": "#FFFFFF", "lightgray": "#F0F0F9", "gray": "#AAAAEE", "darkgray": "#000033", "dark": "#333366", "secondary": "#FF9900", "tertiary": "#FDFDFF", "highlight": "#E0E0E0", "textHighlight": "#0000CC" }
+            },
+            "OceanicNext": {
+                "darkMode": { "light": "#1B2B34", "lightgray": "#343D46", "gray": "#65737E", "darkgray": "#EFC47E", "dark": "#CDD3DE", "secondary": "#4FB8CC", "tertiary": "#13232A", "highlight": "#2C3E50", "textHighlight": "#99C794" },
+                "lightMode": { "light": "#FFFFFF", "lightgray": "#F0F0F0", "gray": "#AAAAAA", "darkgray": "#1B2B34", "dark": "#343D46", "secondary": "#4FB8CC", "tertiary": "#FAFAFA", "highlight": "#E0E0E0", "textHighlight": "#99C794" }
+            },
+            "GithubDark": {
+                "darkMode": { "light": "#0D1117", "lightgray": "#161B22", "gray": "#484F58", "darkgray": "#C9D1D9", "dark": "#8B949E", "secondary": "#58A6FF", "tertiary": "#060A0F", "highlight": "#21262D", "textHighlight": "#7EE787" },
+                "lightMode": { "light": "#FFFFFF", "lightgray": "#F6F8FA", "gray": "#909090", "darkgray": "#24292F", "dark": "#57606A", "secondary": "#0969DA", "tertiary": "#FAFBFC", "highlight": "#F0F3F6", "textHighlight": "#1A7F37" }
+            },
+            "VSCodeDark": {
+                "darkMode": { "light": "#1E1E1E", "lightgray": "#252526", "gray": "#424242", "darkgray": "#9CDCFE", "dark": "#D4D4D4", "secondary": "#569CD6", "tertiary": "#151515", "highlight": "#333333", "textHighlight": "#B5CEA8" },
+                "lightMode": { "light": "#FFFFFF", "lightgray": "#EDEDED", "gray": "#909090", "darkgray": "#1E1E1E", "dark": "#333333", "secondary": "#007ACC", "tertiary": "#FDFDFD", "highlight": "#E0E0E0", "textHighlight": "#008000" }
+            },
+            "ShadesOfPurple": {
+                "darkMode": { "light": "#2D2B55", "lightgray": "#414798", "gray": "#6394F8", "darkgray": "#FAD000", "dark": "#FFFFFF", "secondary": "#FF77AA", "tertiary": "#242240", "highlight": "#545199", "textHighlight": "#A5FFFE" },
+                "lightMode": { "light": "#FFFFFF", "lightgray": "#F0F0F0", "gray": "#AAAAAA", "darkgray": "#2D2B55", "dark": "#414798", "secondary": "#FF77AA", "tertiary": "#FDFDFF", "highlight": "#E0E0E0", "textHighlight": "#FAD000" }
+            },
+            "DeepForest": {
+                "darkMode": { "light": "#141C25", "lightgray": "#202F3F", "gray": "#405D7A", "darkgray": "#B8E986", "dark": "#D6D6D6", "secondary": "#84A9AC", "tertiary": "#0A1016", "highlight": "#314459", "textHighlight": "#E95464" },
+                "lightMode": { "light": "#FCFCFA", "lightgray": "#F0F0F0", "gray": "#AAAAAA", "darkgray": "#141C25", "dark": "#202F3F", "secondary": "#5E81AC", "tertiary": "#FDFDFD", "highlight": "#E0E0E0", "textHighlight": "#E95464" }
+            },
+            "TidalWave": {
+                "darkMode": { "light": "#00101C", "lightgray": "#002030", "gray": "#005F9A", "darkgray": "#9DD9FF", "dark": "#D6F0FF", "secondary": "#5AF2FF", "tertiary": "#000810", "highlight": "#003A5C", "textHighlight": "#FFC13A" },
+                "lightMode": { "light": "#FFFFFF", "lightgray": "#F0F8FF", "gray": "#A0C8D9", "darkgray": "#00101C", "dark": "#002030", "secondary": "#007ACC", "tertiary": "#FDFDFF", "highlight": "#E0E0E0", "textHighlight": "#5AF2FF" }
+            },
+            "Tender": {
+                "darkMode": { "light": "#282A36", "lightgray": "#3D4252", "gray": "#6E7587", "darkgray": "#E0E0E0", "dark": "#D0D0D0", "secondary": "#FFAE57", "tertiary": "#20222B", "highlight": "#4F5566", "textHighlight": "#8FD878" },
+                "lightMode": { "light": "#FFFFFF", "lightgray": "#F5F5F5", "gray": "#A0A0A0", "darkgray": "#282A36", "dark": "#4F5566", "secondary": "#FF6188", "tertiary": "#FAFAFA", "highlight": "#E0E0E0", "textHighlight": "#FFAE57" }
+            },
+            "Firefly": {
+                "darkMode": { "light": "#002A54", "lightgray": "#003A70", "gray": "#0064B0", "darkgray": "#F2F7F9", "dark": "#B0D8F0", "secondary": "#FFB84C", "tertiary": "#002040", "highlight": "#004B90", "textHighlight": "#A3BE8C" },
+                "lightMode": { "light": "#FFFFFF", "lightgray": "#F0F8FF", "gray": "#A0AAB0", "darkgray": "#002A54", "dark": "#003A70", "secondary": "#007ACC", "tertiary": "#FDFDFF", "highlight": "#E0E0E0", "textHighlight": "#FFB84C" }
+            },
+            "HighContrastDark": {
+                "darkMode": { "light": "#000000", "lightgray": "#1A1A1A", "gray": "#A0A0A0", "darkgray": "#FFFFFF", "dark": "#FFFFFF", "secondary": "#00CCFF", "tertiary": "#050505", "highlight": "#222222", "textHighlight": "#33FF33" },
+                "lightMode": { "light": "#FFFFFF", "lightgray": "#F0F0F0", "gray": "#444444", "darkgray": "#000000", "dark": "#000000", "secondary": "#0000CC", "tertiary": "#FAFAFA", "highlight": "#E0E0E0", "textHighlight": "#FF0000" }
+            },
+            "Desert": {
+                "darkMode": { "light": "#332D28", "lightgray": "#4A403A", "gray": "#8D7B73", "darkgray": "#E3DCCF", "dark": "#C7B9A9", "secondary": "#D37B55", "tertiary": "#2C2723", "highlight": "#5F5048", "textHighlight": "#A9BF66" },
+                "lightMode": { "light": "#FDF5E6", "lightgray": "#F3E9D9", "gray": "#C7B9A9", "darkgray": "#5F5048", "dark": "#7C6C60", "secondary": "#D37B55", "tertiary": "#FFFCF6", "highlight": "#EBE3D9", "textHighlight": "#B58900" }
+            }
+          }
+        }
+    </script>
+
+    <!-- Main Content Container -->
+    <div class="themed-bg min-h-screen">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-4 gap-8 p-6 md:p-12">
+
+            <!-- Sidebar / Navigation -->
+            <div class="lg:col-span-1">
+                <div class="sidebar themed-card-bg quartz-shadow p-6 rounded-xl border themed-border">
+                    <h1 class="text-4xl themed-title font-bold mb-1">The Mastery Project</h1>
+                    <p class="themed-subtitle text-sm mb-6">Reflections on Life, Ambition, and Competence.</p>
+
+                    <div id="theme-selector" class="mb-6">
+                        <label for="theme-dropdown" class="block text-sm font-medium themed-text mb-2">Select Theme:</label>
+                        <select id="theme-dropdown" class="themed-dropdown w-full p-2 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-offset-2">
+                            <!-- Options populated by JS -->
+                        </select>
+                    </div>
+
+                    <div id="mode-selector" class="mb-8 flex space-x-4">
+                         <button id="light-mode-btn" class="flex-1 themed-button text-sm font-semibold py-2 px-3 rounded-lg hover:opacity-90 transition duration-150">
+                            Light
+                        </button>
+                        <button id="dark-mode-btn" class="flex-1 themed-button text-sm font-semibold py-2 px-3 rounded-lg hover:opacity-90 transition duration-150">
+                            Dark
+                        </button>
+                    </div>
+
+                    <!-- Article List (Navigation) -->
+                    <h2 class="text-xl themed-title font-semibold mb-4">Essays on Growth</h2>
+                    <ul id="article-list" class="space-y-2 themed-text text-sm">
+                        <!-- UPDATED NAVIGATION ITEMS -->
+                        <li class="sidebar-item active" data-article-id="1">
+                            <span class="sidebar-link themed-text">The Compass and the Map</span>
+                        </li>
+                        <li class="sidebar-item" data-article-id="2">
+                            <span class="sidebar-link themed-text">The Enemy of Greatness</span>
+                        </li>
+                        <li class="sidebar-item" data-article-id="3">
+                            <span class="sidebar-link themed-text">The Quiet Power of Effort</span>
+                        </li>
+                        <li class="sidebar-item" data-article-id="4">
+                            <span class="sidebar-link themed-text">Ambition Meets Meaningful Work</span>
+                        </li>
+                        <li class="sidebar-item" data-article-id="5">
+                            <span class="sidebar-link themed-text">The Cycle of Mastery</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Main Article Content -->
+            <div class="lg:col-span-3">
+                <div class="themed-card-bg quartz-shadow p-6 md:p-12 rounded-xl border themed-border min-h-[80vh] relative">
+                    <article id="article-container">
+                        <!-- Content loaded by JS -->
+                    </article>
+
+                    <!-- Color Palette Button (fixed position relative to the card) -->
+                    <div id="palette-button-container">
+                        <button id="show-palette-btn" class="themed-button text-xs md:text-sm font-semibold py-2 px-4 rounded-full transition duration-150 flex items-center space-x-2">
+                             <!-- SVG Icon for Palette/Theme -->
+                            <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm1 17.93V17c2.516-1.026 4.341-3.418 4.793-6.223A.996.996 0 0 0 17 10h-5V5.07c-2.455.459-4.322 2.37-4.789 4.767A.996 0 0 0 7 10h5v4h4.93C16.477 16.43 14.316 17.93 12 17.93zM13 4.07v1.96c2.934.453 5.253 2.772 5.706 5.706H13V4.07z"/></svg>
+                            <span>Show Palette</span>
+                        </button>
+                    </div>
+
+                    <!-- Palette Modal (Initially Hidden) -->
+                    <div id="palette-modal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
+                        <div class="themed-card-bg p-8 rounded-xl w-full max-w-lg themed-text quartz-shadow relative max-h-[90vh] overflow-y-auto">
+                            <h3 id="modal-title" class="text-2xl themed-title font-bold mb-4">Current Theme Palette</h3>
+                            <button id="close-modal-btn" class="absolute top-4 right-4 themed-title hover:opacity-70 transition">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+                            </button>
+
+                            <!-- VIEW TOGGLE BUTTON -->
+                            <div class="flex justify-end mb-4">
+                                <button id="view-toggle-btn" class="themed-button text-xs font-semibold py-2 px-3 rounded-lg hover:opacity-90 transition duration-150">
+                                    Show & Copy JS Object
+                                </button>
+                            </div>
+
+                            <!-- CODE DISPLAY AREA (Initially Hidden by JS) -->
+                            <div id="code-display-area" class="mt-4 mb-4 hidden">
+                                <h4 class="text-sm themed-title mb-2 font-medium">JS Palette Object (Current Theme)</h4>
+                                <pre id="palette-code-output" class="code-block p-3 rounded-lg text-xs overflow-x-auto themed-text"></pre>
+                            </div>
+                            <!-- END CODE DISPLAY AREA -->
+
+                            <!-- SWATCHES GRID (Initially Visible by JS) -->
+                            <div id="palette-swatches" class="grid grid-cols-2 gap-4 mt-6">
+                                <!-- Swatches populated by JS -->
+                            </div>
+                            <!-- END SWATCHES GRID -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        const THEME_STORAGE_KEY = 'blogThemeName';
+        const MODE_STORAGE_KEY = 'blogThemeMode';
+        let currentThemeName = localStorage.getItem(THEME_STORAGE_KEY) || 'TokyoNight';
+        let currentMode = localStorage.getItem(MODE_STORAGE_KEY) || 'darkMode';
+        let allThemes = {};
+
+        /**
+         * Parses the theme data and initializes the app.
+         */
+        function initializeApp() {
+            try {
+                const themeDataElement = document.getElementById('theme-data');
+                // Updated parsing: get the 'colors' object which contains all themes
+                const fullThemeData = JSON.parse(themeDataElement.textContent);
+                allThemes = fullThemeData.colors;
+
+                setupThemePicker();
+                applyTheme(currentThemeName, currentMode);
+                setupArticles();
+                setupModal();
+            } catch (e) {
+                console.error("Error initializing app or parsing theme data:", e);
+                // Fallback theme in case of JSON error
+                allThemes = { "Default": { "darkMode": { "light": "#111", "lightgray": "#222", "gray": "#666", "darkgray": "#fff", "dark": "#ccc", "secondary": "#0cf", "tertiary": "#000", "highlight": "#333", "textHighlight": "#f00" }, "lightMode": { "light": "#fff", "lightgray": "#eee", "gray": "#999", "darkgray": "#333", "dark": "#444", "secondary": "#06f", "tertiary": "#f9f9f9", "highlight": "#ddd", "textHighlight": "#009900" } } };
+                currentThemeName = 'Default';
+                applyTheme(currentThemeName, currentMode);
+            }
+        }
+
+        /**
+         * Sets up the theme dropdown and initial mode buttons.
+         */
+        function setupThemePicker() {
+            const dropdown = document.getElementById('theme-dropdown');
+            dropdown.innerHTML = '';
+
+            const themeNames = Object.keys(allThemes);
+            themeNames.forEach(name => {
+                const option = document.createElement('option');
+                option.value = name;
+                option.textContent = name.split(/(?=[A-Z])/).join(' '); // Add spaces to camelCase names for readability
+                dropdown.appendChild(option);
+            });
+
+            dropdown.value = currentThemeName;
+            dropdown.addEventListener('change', (e) => {
+                currentThemeName = e.target.value;
+                localStorage.setItem(THEME_STORAGE_KEY, currentThemeName);
+                applyTheme(currentThemeName, currentMode);
+            });
+
+            document.getElementById('light-mode-btn').addEventListener('click', () => {
+                setMode('lightMode');
+            });
+
+            document.getElementById('dark-mode-btn').addEventListener('click', () => {
+                setMode('darkMode');
+            });
+        }
+
+        /**
+         * Switches between lightMode and darkMode.
+         * @param {string} mode 'lightMode' or 'darkMode'
+         */
+        function setMode(mode) {
+            currentMode = mode;
+            localStorage.setItem(MODE_STORAGE_KEY, currentMode);
+            applyTheme(currentThemeName, currentMode);
+        }
+
+        /**
+         * Applies the selected theme and mode by updating CSS variables.
+         * @param {string} themeName
+         * @param {string} mode
+         */
+        function applyTheme(themeName, mode) {
+            const theme = allThemes[themeName];
+            if (!theme || !theme[mode]) {
+                console.error(`Theme or mode not found: ${themeName}, ${mode}`);
+                return;
+            }
+
+            const palette = theme[mode];
+            const root = document.documentElement;
+
+            // Update CSS variables
+            for (const key in palette) {
+                root.style.setProperty(`--c-${key}`, palette[key]);
+            }
+
+            // Update mode button styles (basic visual indicator)
+            const lightBtn = document.getElementById('light-mode-btn');
+            const darkBtn = document.getElementById('dark-mode-btn');
+
+            if (mode === 'lightMode') {
+                lightBtn.classList.remove('themed-button');
+                lightBtn.classList.add('bg-gray-400', 'text-black', 'shadow-inner');
+                darkBtn.classList.remove('bg-gray-400', 'text-black', 'shadow-inner');
+                darkBtn.classList.add('themed-button');
+            } else {
+                darkBtn.classList.remove('themed-button');
+                darkBtn.classList.add('bg-gray-400', 'text-black', 'shadow-inner');
+                lightBtn.classList.remove('bg-gray-400', 'text-black', 'shadow-inner');
+                lightBtn.classList.add('themed-button');
+            }
+
+            // Re-render palette if modal is open (and ensure code block is hidden to reset view)
+            const modal = document.getElementById('palette-modal');
+            const codeArea = document.getElementById('code-display-area');
+            const swatchesContainer = document.getElementById('palette-swatches');
+            const toggleBtn = document.getElementById('view-toggle-btn');
+            const modalTitle = document.getElementById('modal-title');
+
+
+            if (!modal.classList.contains('hidden')) {
+                updatePaletteDisplay(themeName, mode, palette);
+
+                // When theme/mode changes, reset modal view to swatches
+                codeArea.classList.add('hidden');
+                swatchesContainer.classList.remove('hidden');
+                toggleBtn.textContent = 'Show & Copy JS Object';
+                modalTitle.textContent = `${themeName} - ${mode === 'darkMode' ? 'Dark' : 'Light'} Palette`;
+            }
+        }
+
+        // --- Article Content Definitions (Updated) ---
+        const articles = {
+            1: {
+                title: "The Compass and the Map: Ambition as Direction, Competence as Path",
+                date: "October 1, 2025",
+                content: `
+                    <h1 class="text-3xl md:text-5xl themed-title font-extrabold mb-4">The Compass and the Map: Ambition as Direction, Competence as Path</h1>
+                    <p class="text-sm themed-subtitle mb-8">Published on October 1, 2025 by The Mastery Project</p>
+
+                    <div class="article-content text-lg">
+                        <p>In the journey of life, **Ambition** serves as the **compass**—it gives us the direction, the "North Star" we aim for. But it is **Competence** that acts as the **map**—the detailed knowledge and skill required to actually navigate the terrain and reach that destination.</p>
+
+                        <h2>The Danger of Misalignment</h2>
+                        <p>A grand ambition without the underlying competence leads to frustration and stagnation. Conversely, immense competence without ambition often results in a life of underachievement, where potential is never fully deployed. True fulfillment is found in the relentless alignment of the two.</p>
+
+                        <blockquote class="themed-highlight-bg p-4 my-6 border-l-4 themed-border themed-text text-sm md:text-base italic">
+                            The greatest ambition is useless if you don't master the small skills required for the first step. Build the path before demanding the horizon.
+                        </blockquote>
+
+                        <h3>Formalizing the Goal Structure</h3>
+                        <p>We can view this duality through a simple, structured model. Every major life goal requires a clear statement of the desired outcome (Ambition) and a clear list of the prerequisite skills (Competence):</p>
+
+                        <pre class="code-block p-4 rounded-lg text-sm overflow-x-auto"><code class="code-line">interface <span style="color:var(--c-textHighlight);">GoalStrategy</span> {</code>
+                        <code class="code-line">  <span style="color:var(--c-secondary);">ambition</span>: <span style="color:var(--c-darkgray);">string</span>; <span style="color:var(--c-gray);">// The long-term objective (The Compass)</span></code>
+                        <code class="code-line">  <span style="color:var(--c-secondary);">competence</span>: <span style="color:var(--c-darkgray);">string</span>[]; <span style="color:var(--c-gray);">// The required skills/tools (The Map)</span></code>
+                        <code class="code-line">}</code>
+                        </pre>
+
+                        <h2>Developing the Path</h2>
+                        <p>Developing competence is not about talent; it is about deliberate practice and feedback. It means breaking down the ambition into measurable milestones and systematically acquiring the skills needed for each segment of the map. This turns the overwhelming grandeur of the ambition into a series of achievable tasks.</p>
+
+                        <h3>Key Takeaways for Daily Growth</h3>
+                        <ul>
+                            <li>Audit your current skills against your highest ambition.</li>
+                            <li>Identify the largest skill gap and prioritize mastering it first.</li>
+                            <li>Treat competence development as an integral part of your life plan.</li>
+                        </ul>
+                    </div>
+                `
+            },
+            2: {
+                title: "Why 'Good Enough' is the Enemy of Greatness in Life",
+                date: "September 25, 2025",
+                content: `
+                    <h1 class="text-3xl md:text-5xl themed-title font-extrabold mb-4">Why 'Good Enough' is the Enemy of Greatness in Life</h1>
+                    <p class="text-sm themed-subtitle mb-8">Published on September 25, 2025 by The Mastery Project</p>
+
+                    <div class="article-content text-lg">
+                        <p>The biggest threat to extraordinary achievement is not spectacular failure, but the seduction of **mediocrity**. The phrase "good enough" signals the precise moment when effort ceases, curiosity dies, and personal growth plateaus. It’s the comfortable ceiling we place over our potential.</p>
+
+                        <h2>The Plateau of Acceptability</h2>
+                        <p>To strive for greatness—whether in a career, a relationship, or a creative endeavor—requires moving past the point of simple **acceptability**. Deep competence demands intentional friction, a continuous search for complexity, and a commitment to refining skills long after they have become merely "functional."</p>
+
+                        <h3>The Loop of Continuous Improvement</h3>
+                        <p>Greatness is achieved through a sustained, internal process of refinement. It is about committing to a cycle where the goal is always to exceed your last best effort, not just meet a baseline standard:</p>
+                        <pre class="code-block p-4 rounded-lg text-sm overflow-x-auto"><code class="code-line"><span style="color:var(--c-secondary);">function</span> <span style="color:var(--c-textHighlight);">striveForGreatness</span>(<span style="color:var(--c-darkgray);">competence</span>) {</code>
+                        <code class="code-line">  <span style="color:var(--c-secondary);">if</span> (<span style="color:var(--c-darkgray);">competence</span>.isAdequate()) {</code>
+                        <code class="code-line">    <span style="color:var(--c-gray);">// Danger zone: Good enough is the enemy.</span></code>
+                        <code class="code-line">    <span style="color:var(--c-textHighlight);">return</span> <span style="color:var(--c-secondary);">refineAndChallenge</span>(<span style="color:var(--c-darkgray);">competence</span>);</code>
+                        <code class="code-line">  } <span style="color:var(--c-secondary);">else</span> {</code>
+                        <code class="code-line">    <span style="color:var(--c-textHighlight);">return</span> <span style="color:var(--c-darkgray);">competence</span>.continueBuilding();</code>
+                        <code class="code-line">  }</code>
+                        <code class="code-line">}</code>
+                        </pre>
+
+                        <h2>Embracing Discomfort</h2>
+                        <p>The only way to push beyond 'good enough' is to deliberately seek out challenging projects or uncomfortable learning situations. Discomfort is the signal that you are working at the edge of your current ability, which is precisely where growth occurs. Choose the difficult path, and greatness will follow.</p>
+                    </div>
+                `
+            },
+            3: {
+                title: "The Quiet Power of Consistent Effort: Building Life's Foundation",
+                date: "September 18, 2025",
+                content: `
+                    <h1 class="text-3xl md:text-5xl themed-title font-extrabold mb-4">The Quiet Power of Consistent Effort: Building Life's Foundation</h1>
+                    <p class="text-sm themed-subtitle mb-8">Published on September 18, 2025 by The Mastery Project</p>
+
+                    <div class="article-content text-lg">
+                        <p>While ambition is loud and draws attention, **consistent effort** is quiet, often invisible, yet infinitely more powerful. It is the principle of compounding interest applied to life—small, daily investments in skill and habit that result in exponential long-term growth.</p>
+
+                        <h2>The Compounding Effect</h2>
+                        <p>We overestimate what we can do in a day and underestimate what we can do in a decade. A 1% improvement in any area of competence, every single day, does not lead to a 365% improvement over a year; the growth compounds dramatically:</p>
+
+                        <pre class="code-block p-4 rounded-lg text-sm overflow-x-auto"><code class="code-line"><span style="color:var(--c-secondary);">const</span> <span style="color:var(--c-textHighlight);">dailyImprovementFactor</span> = <span style="color:var(--c-darkgray);">1.01</span>;</code>
+                        <code class="code-line"><span style="color:var(--c-secondary);">const</span> <span style="color:var(--c-darkgray);">daysInYear</span> = <span style="color:var(--c-textHighlight);">365</span>;</code>
+                        <code class="code-line"><span style="color:var(--c-secondary);">const</span> <span style="color:var(--c-textHighlight);">totalGrowth</span> = Math.pow(<span style="color:var(--c-darkgray);">dailyImprovementFactor</span>, <span style="color:var(--c-darkgray);">daysInYear</span>);</code>
+                        <code class="code-line"><span style="color:var(--c-gray);">// Result: ~37.8. A 37x return on investment.</span></code>
+                        </pre>
+
+                        <blockquote class="themed-highlight-bg p-4 my-6 border-l-4 themed-border themed-text text-sm md:text-base italic">
+                            Discipline is the bridge between goals and accomplishment. It is the unglamorous, repetitive action that eventually makes the ambitious look inevitable.
+                        </blockquote>
+
+                        <h2>Foundation over Flurry</h2>
+                        <p>Stop chasing the momentary high of a large, sudden effort. Instead, prioritize creating robust daily systems—habits that ensure the minimum required effort is met, regardless of motivation. This disciplined foundation is what allows your eventual ambitions to stand firm and resist the inevitable storms of life.</p>
+                    </div>
+                `
+            },
+            4: {
+                title: "Redefining Success: When Ambition Meets Meaningful Work",
+                date: "September 10, 2025",
+                content: `
+                    <h1 class="text-3xl md:text-5xl themed-title font-extrabold mb-4">Redefining Success: When Ambition Meets Meaningful Work</h1>
+                    <p class="text-sm themed-subtitle mb-8">Published on September 10, 2025 by The Mastery Project</p>
+
+                    <div class="article-content text-lg">
+                        <p>In the modern world, ambition is often narrowly defined by external markers: wealth, title, or status. But true, sustainable success emerges when our drive for achievement (Ambition) is directly coupled with work that aligns with our deepest values (**Meaning**).</p>
+
+                        <h2>The Internal Metric of Fulfillment</h2>
+                        <p>External validation is a temporary boost; internal fulfillment is the fuel that prevents burnout. When your competence is applied to a task you find meaningful—solving a real problem, helping others, creating genuine value—the motivation becomes intrinsic and enduring.</p>
+
+                        <h3>Measuring True Success</h3>
+                        <p>We must adjust our measurement protocols to favor internal satisfaction over mere external achievement. Success should be weighted not just by public recognition, but by private fulfillment:</p>
+                        <pre class="code-block p-4 rounded-lg text-sm overflow-x-auto"><code class="code-line"><span style="color:var(--c-secondary);">const</span> <span style="color:var(--c-textHighlight);">calculateSuccess</span> = (<span style="color:var(--c-darkgray);">validationScore</span>, <span style="color:var(--c-darkgray);">fulfillmentScore</span>) <span style="color:var(--c-secondary);">=&gt;</span> {</code>
+                        <code class="code-line">  <span style="color:var(--c-secondary);">const</span> <span style="color:var(--c-textHighlight);">alignmentFactor</span> = <span style="color:var(--c-darkgray);">fulfillmentScore</span> * <span style="color:var(--c-darkgray);">0.75</span>;</code>
+                        <code class="code-line">  <span style="color:var(--c-textHighlight);">return</span> <span style="color:var(--c-darkgray);">validationScore</span> * <span style="color:var(--c-darkgray);">0.25</span> + <span style="color:var(--c-darkgray);">alignmentFactor</span>; <span style="color:var(--c-gray);">// Heavily favor fulfillment</span></code>
+                        <code class="code-line">};</code>
+                        </pre>
+
+                        <h2>The Integrity of Effort</h2>
+                        <p>When you work on something you genuinely care about, your integrity of effort increases. You demand higher quality from yourself. This passion-fueled competence inevitably leads to both better external results and a greater sense of purpose. Seek the overlap between what you are good at, and what you deeply value.</p>
+                    </div>
+                `
+            },
+            5: {
+                title: "The Cycle of Mastery: From Beginner's Mind to Expert Execution",
+                date: "September 2, 2025",
+                content: `
+                    <h1 class="text-3xl md:text-5xl themed-title font-extrabold mb-4">The Cycle of Mastery: From Beginner's Mind to Expert Execution</h1>
+                    <p class="text-sm themed-subtitle mb-8">Published on September 2, 2025 by The Mastery Project</p>
+
+                    <div class="article-content text-lg">
+                        <p>Competence is not a static state but a dynamic process—a continuous cycle of learning, practicing, failing, and refining. True mastery requires not only technical skill but also the psychological humility to maintain the **Beginner's Mind (Shoshin)**, even when operating at an expert level.</p>
+
+                        <h2>The Four Stages of Competence</h2>
+                        <p>The path to mastery is typically charted through four stages, moving from ignorance to effortless execution. The most common trap is settling in the third stage, where skills are competent but still require taxing conscious effort. True ambition pushes us into the fourth, the realm of **unconscious competence** (flow state).</p>
+
+                        <blockquote class="themed-highlight-bg p-4 my-6 border-l-4 themed-border themed-text text-sm md:text-base italic">
+                            An expert is a beginner who never quit. The only difference is the scale and complexity of the problems they choose to face.
+                        </blockquote>
+
+                        <h3>Maintaining Shoshin in Execution</h3>
+                        <p>To avoid stagnation, the expert must consciously adopt the curiosity and humility of a novice. This ensures every project, no matter how routine, becomes an opportunity for refinement. The expert begins by questioning the foundation:</p>
+                        <pre class="code-block p-4 rounded-lg text-sm overflow-x-auto"><code class="code-line"><span style="color:var(--c-secondary);">const</span> <span style="color:var(--c-textHighlight);">expertExecution</span> = (<span style="color:var(--c-darkgray);">currentProject</span>) <span style="color:var(--c-secondary);">=&gt;</span> {</code>
+                        <code class="code-line">  <span style="color:var(--c-secondary);">if</span> (<span style="color:var(--c-darkgray);">currentProject</span>.isRoutine) {</code>
+                        <code class="code-line">    <span style="color:var(--c-secondary);">const</span> <span style="color:var(--c-darkgray);">newApproach</span> = <span style="color:var(--c-textHighlight);">askWhatIfIamWrong</span>(); <span style="color:var(--c-gray);">// Shoshin injection point</span></code>
+                        <code class="code-line">    <span style="color:var(--c-darkgray);">currentProject</span>.apply(<span style="color:var(--c-darkgray);">newApproach</span>);</code>
+                        <code class="code-line">  }</code>
+                        <code class="code-line">  <span style="color:var(--c-textHighlight);">return</span> <span style="color:var(--c-darkgray);">currentProject</span>.executeWithPrecision();</code>
+                        <code class="code-line">};</code>
+                        </pre>
+
+                        <h2>Embrace the Loop</h2>
+                        <p>Understand that every level of achievement simply unlocks a new, higher level of required competence. Mastery is the constant commitment to this challenging, yet profoundly rewarding, loop.</p>
+                    </div>
+                `
+            }
+        };
+
+        /**
+         * Renders the article content and sets up sidebar navigation.
+         */
+        function setupArticles() {
+            const listContainer = document.getElementById('article-list');
+            const articleContainer = document.getElementById('article-container');
+
+            // Function to load article content
+            const loadArticle = (articleId) => {
+                const article = articles[articleId];
+                if (article) {
+                    articleContainer.innerHTML = article.content;
+
+                    // Update active state in sidebar
+                    document.querySelectorAll('.sidebar-item').forEach(item => {
+                        item.classList.remove('active');
+                    });
+                    document.querySelector(`.sidebar-item[data-article-id="${articleId}"]`).classList.add('active');
+                }
+            };
+
+            // Setup listeners for sidebar links
+            listContainer.querySelectorAll('.sidebar-item').forEach(item => {
+                item.addEventListener('click', () => {
+                    const articleId = item.getAttribute('data-article-id');
+                    loadArticle(articleId);
+                });
+            });
+
+            // Load the first article by default
+            loadArticle(1);
+        }
+
+        // --- Modal & Palette Logic ---
+
+        /**
+         * Helper function to format a single mode's palette data into a string with unquoted keys.
+         * @param {Object} modeData - The palette object (e.g., lightMode data)
+         * @returns {string} The formatted string part.
+         */
+        function formatMode(modeData, indentLevel = 0) {
+            const indent = ' '.repeat(indentLevel);
+            const keyIndent = ' '.repeat(indentLevel + 4);
+
+            let modeString = '{\n';
+
+            for (const [key, value] of Object.entries(modeData)) {
+                // Key is unquoted, value is quoted (as it's a string)
+                modeString += `${keyIndent}${key}: '${value}',\n`;
+            }
+
+            // Remove trailing comma and newline, then add closing brace
+            modeString = modeString.slice(0, -2) + '\n' + indent + '}';
+            return modeString;
+        }
+
+        /**
+         * Generates the complete JS object string for the current theme,
+         * matching the requested format with unquoted keys.
+         * @param {Object} themeData - The theme object (containing lightMode and darkMode)
+         * @returns {string} The complete, formatted JavaScript object string.
+         */
+        function generateJSObjectString(themeData) {
+            // Indentation for nested objects
+            const lightModeString = formatMode(themeData.lightMode, 4);
+            const darkModeString = formatMode(themeData.darkMode, 4);
+
+            return `colors: {\n    lightMode: ${lightModeString},\n    darkMode: ${darkModeString}\n}`;
+        }
+
+        /**
+         * Copies text content to the clipboard and gives visual feedback.
+         * @param {string} text - The text to copy.
+         * @param {HTMLElement} buttonElement - The button to update with feedback.
+         */
+        function copyTextToClipboard(text, buttonElement) {
+            const originalText = buttonElement.textContent;
+            const tempInput = document.createElement('textarea');
+            tempInput.value = text;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            try {
+                document.execCommand('copy');
+                buttonElement.textContent = 'COPIED!';
+                setTimeout(() => {
+                    buttonElement.textContent = originalText;
+                }, 1200);
+            } catch (err) {
+                console.error('Could not copy text: ', err);
+                buttonElement.textContent = 'Error!';
+                setTimeout(() => {
+                    buttonElement.textContent = originalText;
+                }, 1200);
+            }
+            document.body.removeChild(tempInput);
+        }
+
+
+        function setupModal() {
+            const showBtn = document.getElementById('show-palette-btn');
+            const closeBtn = document.getElementById('close-modal-btn');
+            const modal = document.getElementById('palette-modal');
+            const toggleBtn = document.getElementById('view-toggle-btn');
+            const codeArea = document.getElementById('code-display-area');
+            const swatchesContainer = document.getElementById('palette-swatches');
+            const modalTitle = document.getElementById('modal-title');
+
+
+            showBtn.addEventListener('click', () => {
+                modal.classList.remove('hidden');
+
+                // DEFAULT VIEW ON OPEN: Show Swatches, Hide Code
+                codeArea.classList.add('hidden');
+                swatchesContainer.classList.remove('hidden');
+                toggleBtn.textContent = 'Show & Copy JS Object';
+
+                const themeData = allThemes[currentThemeName];
+                const palette = themeData[currentMode];
+                updatePaletteDisplay(currentThemeName, currentMode, palette);
+                modalTitle.textContent = `${currentThemeName} - ${currentMode === 'darkMode' ? 'Dark' : 'Light'} Palette`;
+            });
+
+            closeBtn.addEventListener('click', () => {
+                modal.classList.add('hidden');
+            });
+
+            // Close when clicking outside the modal
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.classList.add('hidden');
+                }
+            });
+
+            // NEW: Toggle View functionality
+            toggleBtn.addEventListener('click', () => {
+                const isShowingCode = !codeArea.classList.contains('hidden');
+
+                if (!isShowingCode) {
+                    // State: Currently showing swatches, switch to CODE view
+
+                    // 1. Generate and display code
+                    const themeData = allThemes[currentThemeName];
+                    const jsObjectString = generateJSObjectString(themeData);
+                    const codeOutput = document.getElementById('palette-code-output');
+                    codeOutput.textContent = jsObjectString;
+
+                    // 2. Toggle visibility (Hide swatches, show code)
+                    swatchesContainer.classList.add('hidden');
+                    codeArea.classList.remove('hidden');
+
+                    // 3. Update button
+                    toggleBtn.textContent = 'Show Color Swatches';
+
+                    // 4. Perform the copy action (simultaneous copy)
+                    copyTextToClipboard(jsObjectString, toggleBtn);
+                    modalTitle.textContent = `JS Object for ${currentThemeName}`;
+
+                } else {
+                    // State: Currently showing code, switch back to SWATCHES view
+
+                    // 1. Toggle visibility (Hide code, show swatches)
+                    codeArea.classList.add('hidden');
+                    swatchesContainer.classList.remove('hidden');
+
+                    // 2. Update button
+                    toggleBtn.textContent = 'Show & Copy JS Object';
+                    modalTitle.textContent = `${currentThemeName} - ${currentMode === 'darkMode' ? 'Dark' : 'Light'} Palette`;
+                }
+            });
+        }
+
+        /**
+         * Populates the modal with the current theme's color swatches.
+         */
+        function updatePaletteDisplay(themeName, mode, palette) {
+            const swatchesContainer = document.getElementById('palette-swatches');
+            swatchesContainer.innerHTML = '';
+
+            for (const [name, hex] of Object.entries(palette)) {
+                const readableName = name.split(/(?=[A-Z])/).join(' ');
+
+                const swatch = document.createElement('div');
+                swatch.className = 'themed-card-bg rounded-lg overflow-hidden border themed-border p-3 flex flex-col items-center cursor-pointer hover:shadow-lg transition duration-200';
+                swatch.title = `Click to copy: ${hex}`;
+                swatch.innerHTML = `
+                    <div class="w-full h-12 rounded-lg mb-2 border border-gray-500/20" style="background-color: ${hex};"></div>
+                    <p class="text-xs themed-title font-semibold">${readableName.toUpperCase()}</p>
+                    <p class="text-xs themed-text opacity-70">${hex.toUpperCase()}</p>
+                `;
+
+                // Copy to clipboard logic for single color
+                swatch.addEventListener('click', () => {
+                    const tempInput = document.createElement('textarea');
+                    tempInput.value = hex;
+                    document.body.appendChild(tempInput);
+                    tempInput.select();
+                    try {
+                        document.execCommand('copy');
+                        swatch.querySelector('p:last-child').textContent = 'COPIED!';
+                        setTimeout(() => {
+                            swatch.querySelector('p:last-child').textContent = hex.toUpperCase();
+                        }, 800);
+                    } catch (err) {
+                        console.error('Could not copy text: ', err);
+                    }
+                    document.body.removeChild(tempInput);
+                });
+
+                swatchesContainer.appendChild(swatch);
+            }
+        }
+
+
+        // Start the application
+        window.onload = initializeApp;
+    </script>
+</body>
+</html>
