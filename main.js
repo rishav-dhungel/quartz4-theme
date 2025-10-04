@@ -812,14 +812,14 @@ function setMode(mode) {
     applyTheme(currentThemeName, currentMode);
 }
 
-
 /**
-  * Parses the theme data and initializes the app.
-  */
-function initializeApp() {
+ * Parses the theme data from colors.json and initializes the app.
+ */
+async function initializeApp() {
     try {
-        const themeDataElement = document.getElementById('theme-data');
-        const fullThemeData = JSON.parse(themeDataElement.textContent);
+        // Fetch external JSON file instead of reading from <script>
+        const response = await fetch('colors-cleaned.json');
+        const fullThemeData = await response.json();
         allThemes = fullThemeData.colors;
 
         setupThemePicker();
@@ -843,8 +843,34 @@ function initializeApp() {
 
     } catch (e) {
         console.error("Error initializing app or parsing theme data:", e);
-        // Fallback theme in case of JSON error
-        allThemes = { "Default": { "darkMode": { "light": "#111", "lightgray": "#222", "gray": "#666", "darkgray": "#fff", "dark": "#ccc", "secondary": "#0cf", "tertiary": "#000", "highlight": "#333", "textHighlight": "#f00" }, "lightMode": { "light": "#fff", "lightgray": "#eee", "gray": "#999", "darkgray": "#333", "dark": "#444", "secondary": "#06f", "tertiary": "#f9f9f9", "highlight": "#ddd", "textHighlight": "#009900" } } };
+
+        // Fallback theme in case JSON cannot be loaded
+        allThemes = {
+            "Default": {
+                "darkMode": {
+                    "light": "#111",
+                    "lightgray": "#222",
+                    "gray": "#666",
+                    "darkgray": "#fff",
+                    "dark": "#ccc",
+                    "secondary": "#0cf",
+                    "tertiary": "#000",
+                    "highlight": "#333",
+                    "textHighlight": "#f00"
+                },
+                "lightMode": {
+                    "light": "#fff",
+                    "lightgray": "#eee",
+                    "gray": "#999",
+                    "darkgray": "#333",
+                    "dark": "#444",
+                    "secondary": "#06f",
+                    "tertiary": "#f9f9f9",
+                    "highlight": "#ddd",
+                    "textHighlight": "#009900"
+                }
+            }
+        };
         currentThemeName = 'Default';
         applyTheme(currentThemeName, currentMode);
     }

@@ -1,0 +1,2380 @@
+{
+  "colors": {
+    "AeroBlue": {
+      "darkMode": {
+        "light": "#0F1A25",
+        "lightgray": "#253545",
+        "gray": "#5A7A9A",
+        "darkgray": "#E8F5FF",
+        "dark": "#D0E0F0",
+        "secondary": "#2196F3",
+        "tertiary": "#0B131C",
+        "highlight": "#1A2530",
+        "textHighlight": "#FFEB3B"
+      },
+      "lightMode": {
+        "light": "#F0F8FF",
+        "lightgray": "#E3F0FF",
+        "gray": "#A0C0E0",
+        "darkgray": "#304A6A",
+        "dark": "#1E2B3A",
+        "secondary": "#00BCD4",
+        "tertiary": "#F7FCFF",
+        "highlight": "#E7EEF5",
+        "textHighlight": "#FF4500"
+      }
+    },
+    "AetherFlow": {
+      "darkMode": {
+        "light": "#050810",
+        "lightgray": "#101825",
+        "gray": "#304A6A",
+        "darkgray": "#E0F5FF",
+        "dark": "#C8E0FF",
+        "secondary": "#40E0D0",
+        "tertiary": "#020408",
+        "highlight": "#0A101A",
+        "textHighlight": "#D4A3FF"
+      },
+      "lightMode": {
+        "light": "#F8FFFF",
+        "lightgray": "#EBF8FF",
+        "gray": "#A8C8E8",
+        "darkgray": "#305070",
+        "dark": "#1A2A3A",
+        "secondary": "#00BCD4",
+        "tertiary": "#FFFFFF",
+        "highlight": "#E0E8F0",
+        "textHighlight": "#FF4081"
+      }
+    },
+    "AlchemyFire": {
+      "darkMode": {
+        "light": "#1A100A",
+        "lightgray": "#352014",
+        "gray": "#6A4020",
+        "darkgray": "#FFE0C0",
+        "dark": "#E8C8A0",
+        "secondary": "#FF8F00",
+        "tertiary": "#140C07",
+        "highlight": "#25180F",
+        "textHighlight": "#B87333"
+      },
+      "lightMode": {
+        "light": "#FFF8E7",
+        "lightgray": "#F5EAD9",
+        "gray": "#D1C0A1",
+        "darkgray": "#644A30",
+        "dark": "#3A2E1A",
+        "secondary": "#FF9800",
+        "tertiary": "#FFFCF0",
+        "highlight": "#F0E4D3",
+        "textHighlight": "#9C27B0"
+      }
+    },
+    "Andromeda": {
+      "darkMode": {
+        "light": "#2D303D",
+        "lightgray": "#34384B",
+        "gray": "#5D616F",
+        "darkgray": "#C574F2",
+        "dark": "#D6D6D6",
+        "secondary": "#F07178",
+        "tertiary": "#252834",
+        "highlight": "#4B5065",
+        "textHighlight": "#98C379"
+      },
+      "lightMode": {
+        "light": "#F8F9FA",
+        "lightgray": "#F0F2F4",
+        "gray": "#C0C5CC",
+        "darkgray": "#2D303D",
+        "dark": "#4C5562",
+        "secondary": "#689D6A",
+        "tertiary": "#F5F6F8",
+        "highlight": "#E3E6E8",
+        "textHighlight": "#C574F2"
+      }
+    },
+    "ArcticChill": {
+      "darkMode": {
+        "light": "#0A101A",
+        "lightgray": "#1A2A3A",
+        "gray": "#4A6A8A",
+        "darkgray": "#E5F5FF",
+        "dark": "#C8E0F0",
+        "secondary": "#2196F3",
+        "tertiary": "#050810",
+        "highlight": "#142030",
+        "textHighlight": "#FF4500"
+      },
+      "lightMode": {
+        "light": "#F5FAFF",
+        "lightgray": "#E8F0F5",
+        "gray": "#A0B5C8",
+        "darkgray": "#304050",
+        "dark": "#1A2530",
+        "secondary": "#00BCD4",
+        "tertiary": "#FFFFFF",
+        "highlight": "#EBEFF4",
+        "textHighlight": "#E91E63"
+      }
+    },
+    "AtomicOrange": {
+      "darkMode": {
+        "light": "#1A0A00",
+        "lightgray": "#35200A",
+        "gray": "#6A4A25",
+        "darkgray": "#FFF0E0",
+        "dark": "#E8D4C8",
+        "secondary": "#FF8F00",
+        "tertiary": "#140800",
+        "highlight": "#25180A",
+        "textHighlight": "#00FF7F"
+      },
+      "lightMode": {
+        "light": "#FFF8F0",
+        "lightgray": "#F5EBE0",
+        "gray": "#D1C0A8",
+        "darkgray": "#5A3A1E",
+        "dark": "#3A2510",
+        "secondary": "#FF9800",
+        "tertiary": "#FFFCF8",
+        "highlight": "#F0E4D3",
+        "textHighlight": "#9C27B0"
+      }
+    },
+    "Aura": {
+      "darkMode": {
+        "light": "#21213E",
+        "lightgray": "#2A2A49",
+        "gray": "#535384",
+        "darkgray": "#A277FF",
+        "dark": "#FFFAF4",
+        "secondary": "#61FFCA",
+        "tertiary": "#1B1B30",
+        "highlight": "#3C3C6B",
+        "textHighlight": "#F69D51"
+      },
+      "lightMode": {
+        "light": "#FFFFFF",
+        "lightgray": "#F3F3FF",
+        "gray": "#AAAAEE",
+        "darkgray": "#535384",
+        "dark": "#6A5ACD",
+        "secondary": "#FF5733",
+        "tertiary": "#FDFDFF",
+        "highlight": "#E0E0FF",
+        "textHighlight": "#61FFCA"
+      }
+    },
+    "AutumnWitch": {
+      "darkMode": {
+        "light": "#251E1A",
+        "lightgray": "#403530",
+        "gray": "#806A5A",
+        "darkgray": "#F0E5D9",
+        "dark": "#D9C8B8",
+        "secondary": "#FF8F00",
+        "tertiary": "#1C1814",
+        "highlight": "#302B25",
+        "textHighlight": "#9C27B0"
+      },
+      "lightMode": {
+        "light": "#FFF8F0",
+        "lightgray": "#F5EBE0",
+        "gray": "#C7A899",
+        "darkgray": "#55302A",
+        "dark": "#3D231C",
+        "secondary": "#D96B4E",
+        "tertiary": "#FFFCF8",
+        "highlight": "#F0E3D3",
+        "textHighlight": "#4CAF50"
+      }
+    },
+    "AyuMirage": {
+      "darkMode": {
+        "light": "#1A1F26",
+        "lightgray": "#242D38",
+        "gray": "#676F7C",
+        "darkgray": "#FFC777",
+        "dark": "#C5C5C5",
+        "secondary": "#70B4B0",
+        "tertiary": "#12151A",
+        "highlight": "#334151",
+        "textHighlight": "#96E072"
+      },
+      "lightMode": {
+        "light": "#F8F9FA",
+        "lightgray": "#F0F2F4",
+        "gray": "#C0C5CC",
+        "darkgray": "#1A1F26",
+        "dark": "#4C5562",
+        "secondary": "#689D6A",
+        "tertiary": "#F5F6F8",
+        "highlight": "#E3E6E8",
+        "textHighlight": "#FF7A5C"
+      }
+    },
+    "BaroqueGold": {
+      "darkMode": {
+        "light": "#1A0A0F",
+        "lightgray": "#301E25",
+        "gray": "#6A4050",
+        "darkgray": "#F0E0E5",
+        "dark": "#D4C8D0",
+        "secondary": "#FFD700",
+        "tertiary": "#14070B",
+        "highlight": "#25141A",
+        "textHighlight": "#5DADE4"
+      },
+      "lightMode": {
+        "light": "#FFF8FA",
+        "lightgray": "#F5EBEF",
+        "gray": "#C7A8B0",
+        "darkgray": "#5A303A",
+        "dark": "#3A1E25",
+        "secondary": "#B8860B",
+        "tertiary": "#FFFCFD",
+        "highlight": "#F0E4E7",
+        "textHighlight": "#4CAF50"
+      }
+    },
+    "BioLuminescence": {
+      "darkMode": {
+        "light": "#000000",
+        "lightgray": "#1A1A1A",
+        "gray": "#4A4A4A",
+        "darkgray": "#E0FFF0",
+        "dark": "#A3FFBA",
+        "secondary": "#00FF00",
+        "tertiary": "#000000",
+        "highlight": "#0A0A0A",
+        "textHighlight": "#00FFFF"
+      },
+      "lightMode": {
+        "light": "#FFFFFF",
+        "lightgray": "#F0F0F0",
+        "gray": "#B0B0B0",
+        "darkgray": "#303030",
+        "dark": "#1A1A1A",
+        "secondary": "#4CAF50",
+        "tertiary": "#FAFAFA",
+        "highlight": "#EBEBEB",
+        "textHighlight": "#8B00FF"
+      }
+    },
+    "CatppuccinMocha": {
+      "darkMode": {
+        "light": "#1E1E2E",
+        "lightgray": "#313244",
+        "gray": "#585B70",
+        "darkgray": "#CBA6F7",
+        "dark": "#CDD6F4",
+        "secondary": "#F38BA8",
+        "tertiary": "#181825",
+        "highlight": "#45475A",
+        "textHighlight": "#A6E3A1"
+      },
+      "lightMode": {
+        "light": "#EFF1F5",
+        "lightgray": "#E6E9ED",
+        "gray": "#939AB7",
+        "darkgray": "#4C4F69",
+        "dark": "#4C4F69",
+        "secondary": "#D20F39",
+        "tertiary": "#C6D0F5",
+        "highlight": "#DCE0E8",
+        "textHighlight": "#40A02B"
+      }
+    },
+    "CharcoalTeal": {
+      "darkMode": {
+        "light": "#1A2020",
+        "lightgray": "#304040",
+        "gray": "#658080",
+        "darkgray": "#E0FFFF",
+        "dark": "#C0EBEB",
+        "secondary": "#4DB6AC",
+        "tertiary": "#141818",
+        "highlight": "#253030",
+        "textHighlight": "#FFB84D"
+      },
+      "lightMode": {
+        "light": "#F5FFFA",
+        "lightgray": "#E8F0F0",
+        "gray": "#A8C0C0",
+        "darkgray": "#405A5A",
+        "dark": "#253A3A",
+        "secondary": "#009688",
+        "tertiary": "#FFFFFF",
+        "highlight": "#EBF0F0",
+        "textHighlight": "#D81B60"
+      }
+    },
+    "CinnabarDust": {
+      "darkMode": {
+        "light": "#2A100A",
+        "lightgray": "#45201A",
+        "gray": "#8A5040",
+        "darkgray": "#FFE0D9",
+        "dark": "#E8C8C0",
+        "secondary": "#D84315",
+        "tertiary": "#200C08",
+        "highlight": "#351A14",
+        "textHighlight": "#9CCC6B"
+      },
+      "lightMode": {
+        "light": "#FFF5F0",
+        "lightgray": "#F5E8E0",
+        "gray": "#D9A899",
+        "darkgray": "#643A2E",
+        "dark": "#45201A",
+        "secondary": "#BF360C",
+        "tertiary": "#FFFCF8",
+        "highlight": "#F0E4D3",
+        "textHighlight": "#2196F3"
+      }
+    },
+    "CloudNine": {
+      "darkMode": {
+        "light": "#1F232A",
+        "lightgray": "#3A4555",
+        "gray": "#7A8CA3",
+        "darkgray": "#F0F8FF",
+        "dark": "#D4E0E8",
+        "secondary": "#90CAF9",
+        "tertiary": "#181A20",
+        "highlight": "#2A303A",
+        "textHighlight": "#FFD54F"
+      },
+      "lightMode": {
+        "light": "#FFFFFF",
+        "lightgray": "#F0F5F8",
+        "gray": "#A8C3D1",
+        "darkgray": "#4A5A6A",
+        "dark": "#33404D",
+        "secondary": "#4FC3F7",
+        "tertiary": "#FAFAFA",
+        "highlight": "#EBEFF2",
+        "textHighlight": "#E57373"
+      }
+    },
+    "CopperKettle": {
+      "darkMode": {
+        "light": "#2E1C16",
+        "lightgray": "#4A2F25",
+        "gray": "#8A5C4A",
+        "darkgray": "#E8D8C9",
+        "dark": "#D9C7B6",
+        "secondary": "#B87333",
+        "tertiary": "#241712",
+        "highlight": "#3A251D",
+        "textHighlight": "#4CAF50"
+      },
+      "lightMode": {
+        "light": "#FFF8F2",
+        "lightgray": "#F5E9DF",
+        "gray": "#C7B2A1",
+        "darkgray": "#5A3A2C",
+        "dark": "#3A251D",
+        "secondary": "#A16F49",
+        "tertiary": "#FFFCF9",
+        "highlight": "#F0E4D9",
+        "textHighlight": "#D81B60"
+      }
+    },
+    "CoralReef": {
+      "darkMode": {
+        "light": "#1A0A10",
+        "lightgray": "#351E28",
+        "gray": "#754A5A",
+        "darkgray": "#FFF0F0",
+        "dark": "#FFD9D9",
+        "secondary": "#FF5722",
+        "tertiary": "#100508",
+        "highlight": "#25141A",
+        "textHighlight": "#00BCD4"
+      },
+      "lightMode": {
+        "light": "#FFF5F5",
+        "lightgray": "#F5E8E8",
+        "gray": "#E8B5B5",
+        "darkgray": "#6A3030",
+        "dark": "#401818",
+        "secondary": "#FF7043",
+        "tertiary": "#FFFFFD",
+        "highlight": "#F0EBEB",
+        "textHighlight": "#3F51B5"
+      }
+    },
+    "CosmicRay": {
+      "darkMode": {
+        "light": "#0F0F23",
+        "lightgray": "#25254A",
+        "gray": "#6A6A9E",
+        "darkgray": "#FFFF00",
+        "dark": "#FFEEA5",
+        "secondary": "#FF00FF",
+        "tertiary": "#08081A",
+        "highlight": "#1A1A3F",
+        "textHighlight": "#FFFF00"
+      },
+      "lightMode": {
+        "light": "#FFFFFF",
+        "lightgray": "#F0F0F5",
+        "gray": "#A0A0B0",
+        "darkgray": "#33334A",
+        "dark": "#1A1A2E",
+        "secondary": "#8A2BE2",
+        "tertiary": "#FAFAFF",
+        "highlight": "#EBEBF0",
+        "textHighlight": "#FF4500"
+      }
+    },
+    "CrimsonEclipse": {
+      "darkMode": {
+        "light": "#10050A",
+        "lightgray": "#2A141A",
+        "gray": "#6A404A",
+        "darkgray": "#FFE0E5",
+        "dark": "#D9C8D0",
+        "secondary": "#D32F2F",
+        "tertiary": "#080305",
+        "highlight": "#1C1014",
+        "textHighlight": "#00FF7F"
+      },
+      "lightMode": {
+        "light": "#FFF5F5",
+        "lightgray": "#F5E8E8",
+        "gray": "#D1A8A8",
+        "darkgray": "#5A3030",
+        "dark": "#3A1E1E",
+        "secondary": "#C62828",
+        "tertiary": "#FFFCFC",
+        "highlight": "#F0E4E4",
+        "textHighlight": "#2196F3"
+      }
+    },
+    "CyberpunkNeon": {
+      "darkMode": {
+        "light": "#0A001A",
+        "lightgray": "#1A0A35",
+        "gray": "#40307A",
+        "darkgray": "#E0E5FF",
+        "dark": "#D4C8E8",
+        "secondary": "#00FFFF",
+        "tertiary": "#050014",
+        "highlight": "#140525",
+        "textHighlight": "#FF00AA"
+      },
+      "lightMode": {
+        "light": "#F5FAFF",
+        "lightgray": "#E8F0F5",
+        "gray": "#A0B5C8",
+        "darkgray": "#304050",
+        "dark": "#1A2530",
+        "secondary": "#FF00FF",
+        "tertiary": "#FFFFFF",
+        "highlight": "#EBEFF4",
+        "textHighlight": "#00FFFF"
+      }
+    },
+    "DeepFores": {
+      "darkMode": {
+        "light": "#10180F",
+        "lightgray": "#253520",
+        "gray": "#557A4B",
+        "darkgray": "#E8F0E5",
+        "dark": "#D0E0C7",
+        "secondary": "#8BC34A",
+        "tertiary": "#0B1109",
+        "highlight": "#1A2518",
+        "textHighlight": "#FFD700"
+      },
+      "lightMode": {
+        "light": "#F5FFF0",
+        "lightgray": "#E9F5E3",
+        "gray": "#ADC8A0",
+        "darkgray": "#385A30",
+        "dark": "#253A20",
+        "secondary": "#4CAF50",
+        "tertiary": "#FAFFFA",
+        "highlight": "#EFF4EB",
+        "textHighlight": "#D81B60"
+      }
+    },
+    "DeepForest": {
+      "darkMode": {
+        "light": "#10180F",
+        "lightgray": "#253520",
+        "gray": "#557A4B",
+        "darkgray": "#E8F0E5",
+        "dark": "#D0E0C7",
+        "secondary": "#8BC34A",
+        "tertiary": "#0B1109",
+        "highlight": "#1A2518",
+        "textHighlight": "#FFD700"
+      },
+      "lightMode": {
+        "light": "#F5FFF0",
+        "lightgray": "#E9F5E3",
+        "gray": "#ADC8A0",
+        "darkgray": "#385A30",
+        "dark": "#253A20",
+        "secondary": "#4CAF50",
+        "tertiary": "#FAFFFA",
+        "highlight": "#EFF4EB",
+        "textHighlight": "#D81B60"
+      }
+    },
+    "Desert": {
+      "darkMode": {
+        "light": "#332D28",
+        "lightgray": "#4A403A",
+        "gray": "#8D7B73",
+        "darkgray": "#E3DCCF",
+        "dark": "#C7B9A9",
+        "secondary": "#D37B55",
+        "tertiary": "#2C2723",
+        "highlight": "#5F5048",
+        "textHighlight": "#A9BF66"
+      },
+      "lightMode": {
+        "light": "#FDF5E6",
+        "lightgray": "#F3E9D9",
+        "gray": "#C7B9A9",
+        "darkgray": "#5F5048",
+        "dark": "#7C6C60",
+        "secondary": "#D37B55",
+        "tertiary": "#FFFCF6",
+        "highlight": "#EBE3D9",
+        "textHighlight": "#B58900"
+      }
+    },
+    "DesertRose": {
+      "darkMode": {
+        "light": "#2A1E1E",
+        "lightgray": "#453030",
+        "gray": "#806565",
+        "darkgray": "#FFF0F0",
+        "dark": "#E8D4D4",
+        "secondary": "#F06292",
+        "tertiary": "#201717",
+        "highlight": "#352828",
+        "textHighlight": "#4DB6AC"
+      },
+      "lightMode": {
+        "light": "#FFF8F8",
+        "lightgray": "#F5EBEB",
+        "gray": "#D9C0C0",
+        "darkgray": "#6A4A4A",
+        "dark": "#402E2E",
+        "secondary": "#EC407A",
+        "tertiary": "#FFFCFC",
+        "highlight": "#F0E4E4",
+        "textHighlight": "#007ACC"
+      }
+    },
+    "Dracula": {
+      "darkMode": {
+        "light": "#282A36",
+        "lightgray": "#44475A",
+        "gray": "#6272A4",
+        "darkgray": "#F8F8F2",
+        "dark": "#BD93F9",
+        "secondary": "#50FA7B",
+        "tertiary": "#191A21",
+        "highlight": "#383A4A",
+        "textHighlight": "#FF79C6"
+      },
+      "lightMode": {
+        "light": "#FFFFFF",
+        "lightgray": "#F0F0F0",
+        "gray": "#A0A0A0",
+        "darkgray": "#44475A",
+        "dark": "#6272A4",
+        "secondary": "#FF79C6",
+        "tertiary": "#F5F5F5",
+        "highlight": "#E0E0E0",
+        "textHighlight": "#50FA7B"
+      }
+    },
+    "ElectricViolet": {
+      "darkMode": {
+        "light": "#100A15",
+        "lightgray": "#2A1E35",
+        "gray": "#6A409E",
+        "darkgray": "#EBF0FF",
+        "dark": "#D1C4E8",
+        "secondary": "#A300FF",
+        "tertiary": "#080510",
+        "highlight": "#1C1425",
+        "textHighlight": "#4DE050"
+      },
+      "lightMode": {
+        "light": "#F5F0FF",
+        "lightgray": "#E8E0F5",
+        "gray": "#B3A3D1",
+        "darkgray": "#4A2E64",
+        "dark": "#301E45",
+        "secondary": "#8B00FF",
+        "tertiary": "#FAFAFF",
+        "highlight": "#E0D3EF",
+        "textHighlight": "#FF4500"
+      }
+    },
+    "EmeraaldDusk": {
+      "darkMode": {
+        "light": "#10231D",
+        "lightgray": "#203F35",
+        "gray": "#558A7A",
+        "darkgray": "#E0FFF5",
+        "dark": "#C8F5E8",
+        "secondary": "#4CAF50",
+        "tertiary": "#0A1814",
+        "highlight": "#1A322C",
+        "textHighlight": "#FFC107"
+      },
+      "lightMode": {
+        "light": "#F0FFF5",
+        "lightgray": "#E3F7EB",
+        "gray": "#9CD0B9",
+        "darkgray": "#285F4D",
+        "dark": "#1A3D34",
+        "secondary": "#009688",
+        "tertiary": "#FAFFFD",
+        "highlight": "#E7F0E6",
+        "textHighlight": "#F44336"
+      }
+    },
+    "EmeraldDusk": {
+      "darkMode": {
+        "light": "#10231D",
+        "lightgray": "#203F35",
+        "gray": "#558A7A",
+        "darkgray": "#E0FFF5",
+        "dark": "#C8F5E8",
+        "secondary": "#4CAF50",
+        "tertiary": "#0A1814",
+        "highlight": "#1A322C",
+        "textHighlight": "#FFC107"
+      },
+      "lightMode": {
+        "light": "#F0FFF5",
+        "lightgray": "#E3F7EB",
+        "gray": "#9CD0B9",
+        "darkgray": "#285F4D",
+        "dark": "#1A3D34",
+        "secondary": "#009688",
+        "tertiary": "#FAFFFD",
+        "highlight": "#E7F0E6",
+        "textHighlight": "#F44336"
+      }
+    },
+    "EtherealGlow": {
+      "darkMode": {
+        "light": "#0A0A10",
+        "lightgray": "#1A1A25",
+        "gray": "#40405A",
+        "darkgray": "#E0E0FF",
+        "dark": "#C8C8E8",
+        "secondary": "#80DFFF",
+        "tertiary": "#050508",
+        "highlight": "#14141C",
+        "textHighlight": "#FF00FF"
+      },
+      "lightMode": {
+        "light": "#F5F5FF",
+        "lightgray": "#E8E8F5",
+        "gray": "#A0A0C8",
+        "darkgray": "#303050",
+        "dark": "#1A1A30",
+        "secondary": "#4FC3F7",
+        "tertiary": "#FAFAFF",
+        "highlight": "#EBEBF4",
+        "textHighlight": "#E91E63"
+      }
+    },
+    "Everforest": {
+      "darkMode": {
+        "light": "#323D43",
+        "lightgray": "#3F514F",
+        "gray": "#7A8478",
+        "darkgray": "#D3C6AA",
+        "dark": "#A7C080",
+        "secondary": "#E67E80",
+        "tertiary": "#272F33",
+        "highlight": "#47504F",
+        "textHighlight": "#83C092"
+      },
+      "lightMode": {
+        "light": "#FCFCFA",
+        "lightgray": "#F0EDE4",
+        "gray": "#A6A69C",
+        "darkgray": "#5C6A72",
+        "dark": "#5C6A72",
+        "secondary": "#499573",
+        "tertiary": "#836e2fff",
+        "highlight": "#E6E2D0",
+        "textHighlight": "#D69987"
+      }
+    },
+    "Firefly": {
+      "darkMode": {
+        "light": "#002A54",
+        "lightgray": "#003A70",
+        "gray": "#0064B0",
+        "darkgray": "#F2F7F9",
+        "dark": "#B0D8F0",
+        "secondary": "#FFB84C",
+        "tertiary": "#002040",
+        "highlight": "#004B90",
+        "textHighlight": "#A3BE8C"
+      },
+      "lightMode": {
+        "light": "#FFFFFF",
+        "lightgray": "#F0F8FF",
+        "gray": "#A0AAB0",
+        "darkgray": "#002A54",
+        "dark": "#003A70",
+        "secondary": "#007ACC",
+        "tertiary": "#FDFDFF",
+        "highlight": "#E0E0E0",
+        "textHighlight": "#FFB84C"
+      }
+    },
+    "GhostPepper": {
+      "darkMode": {
+        "light": "#150A0A",
+        "lightgray": "#2A1A1A",
+        "gray": "#503030",
+        "darkgray": "#FFE0E0",
+        "dark": "#D4C8C8",
+        "secondary": "#FF5722",
+        "tertiary": "#100707",
+        "highlight": "#1C1414",
+        "textHighlight": "#FFD700"
+      },
+      "lightMode": {
+        "light": "#FFF5F5",
+        "lightgray": "#F5E8E8",
+        "gray": "#D1A0A0",
+        "darkgray": "#503030",
+        "dark": "#301A1A",
+        "secondary": "#FF7043",
+        "tertiary": "#FFFCFC",
+        "highlight": "#F0E4E4",
+        "textHighlight": "#4DB6AC"
+      }
+    },
+    "GithubDark": {
+      "darkMode": {
+        "light": "#0D1117",
+        "lightgray": "#161B22",
+        "gray": "#484F58",
+        "darkgray": "#C9D1D9",
+        "dark": "#8B949E",
+        "secondary": "#58A6FF",
+        "tertiary": "#060A0F",
+        "highlight": "#21262D",
+        "textHighlight": "#7EE787"
+      },
+      "lightMode": {
+        "light": "#FFFFFF",
+        "lightgray": "#F6F8FA",
+        "gray": "#909090",
+        "darkgray": "#24292F",
+        "dark": "#57606A",
+        "secondary": "#0969DA",
+        "tertiary": "#FAFBFC",
+        "highlight": "#F0F3F6",
+        "textHighlight": "#1A7F37"
+      }
+    },
+    "GlacierMelt": {
+      "darkMode": {
+        "light": "#0A1015",
+        "lightgray": "#1A252E",
+        "gray": "#4A607A",
+        "darkgray": "#E0F5FF",
+        "dark": "#C8D9E8",
+        "secondary": "#64B5F6",
+        "tertiary": "#05080A",
+        "highlight": "#141D25",
+        "textHighlight": "#D9534F"
+      },
+      "lightMode": {
+        "light": "#F5FAFF",
+        "lightgray": "#E8F0F5",
+        "gray": "#A0B5C8",
+        "darkgray": "#304050",
+        "dark": "#1A2530",
+        "secondary": "#42A5F5",
+        "tertiary": "#FFFFFF",
+        "highlight": "#EBEFF4",
+        "textHighlight": "#FF9800"
+      }
+    },
+    "GoldenHour": {
+      "darkMode": {
+        "light": "#251A0A",
+        "lightgray": "#40301E",
+        "gray": "#806540",
+        "darkgray": "#FFF8E0",
+        "dark": "#E8D4B8",
+        "secondary": "#FFC107",
+        "tertiary": "#1C1405",
+        "highlight": "#302514",
+        "textHighlight": "#4DB6AC"
+      },
+      "lightMode": {
+        "light": "#FFFDE7",
+        "lightgray": "#FFF5CC",
+        "gray": "#E0D080",
+        "darkgray": "#5A4A1E",
+        "dark": "#3A2E05",
+        "secondary": "#FFB300",
+        "tertiary": "#FFFFF0",
+        "highlight": "#FFF7E0",
+        "textHighlight": "#D81B60"
+      }
+    },
+    "GothicRose": {
+      "darkMode": {
+        "light": "#150C0F",
+        "lightgray": "#281A1D",
+        "gray": "#604A50",
+        "darkgray": "#F0E0E3",
+        "dark": "#D5C5C8",
+        "secondary": "#D81B60",
+        "tertiary": "#0A0708",
+        "highlight": "#1E1618",
+        "textHighlight": "#4CAF50"
+      },
+      "lightMode": {
+        "light": "#FFF8FA",
+        "lightgray": "#F5E9EC",
+        "gray": "#C8A1A6",
+        "darkgray": "#4A3035",
+        "dark": "#2A181C",
+        "secondary": "#B00020",
+        "tertiary": "#FFFCFD",
+        "highlight": "#F0E4E7",
+        "textHighlight": "#00ACC1"
+      }
+    },
+    "GravelRoad": {
+      "darkMode": {
+        "light": "#1A1A1A",
+        "lightgray": "#333333",
+        "gray": "#6A6A6A",
+        "darkgray": "#E0E0E0",
+        "dark": "#D4D4D4",
+        "secondary": "#8C8C8C",
+        "tertiary": "#151515",
+        "highlight": "#252525",
+        "textHighlight": "#2196F3"
+      },
+      "lightMode": {
+        "light": "#F0F0F0",
+        "lightgray": "#E3E3E3",
+        "gray": "#A8A8A8",
+        "darkgray": "#4A4A4A",
+        "dark": "#2E2E2E",
+        "secondary": "#757575",
+        "tertiary": "#FAFAFA",
+        "highlight": "#EBEBEB",
+        "textHighlight": "#D81B60"
+      }
+    },
+    "Gruvbox": {
+      "darkMode": {
+        "light": "#282828",
+        "lightgray": "#3C3836",
+        "gray": "#928374",
+        "darkgray": "#EBDBB2",
+        "dark": "#D5C4A1",
+        "secondary": "#FE8019",
+        "tertiary": "#1D2021",
+        "highlight": "#504945",
+        "textHighlight": "#B8BB26"
+      },
+      "lightMode": {
+        "light": "#FBF1C7",
+        "lightgray": "#F2E5BC",
+        "gray": "#928374",
+        "darkgray": "#3C3836",
+        "dark": "#665C54",
+        "secondary": "#D65D0E",
+        "tertiary": "#F5E9D0",
+        "highlight": "#EBCB8B",
+        "textHighlight": "#98971A"
+      }
+    },
+    "HighContrastDark": {
+      "darkMode": {
+        "light": "#000000",
+        "lightgray": "#1A1A1A",
+        "gray": "#A0A0A0",
+        "darkgray": "#FFFFFF",
+        "dark": "#FFFFFF",
+        "secondary": "#00CCFF",
+        "tertiary": "#050505",
+        "highlight": "#222222",
+        "textHighlight": "#33FF33"
+      },
+      "lightMode": {
+        "light": "#FFFFFF",
+        "lightgray": "#F0F0F0",
+        "gray": "#444444",
+        "darkgray": "#000000",
+        "dark": "#000000",
+        "secondary": "#0000CC",
+        "tertiary": "#FAFAFA",
+        "highlight": "#E0E0E0",
+        "textHighlight": "#FF0000"
+      }
+    },
+    "HighlandMoss": {
+      "darkMode": {
+        "light": "#1A201A",
+        "lightgray": "#304030",
+        "gray": "#658065",
+        "darkgray": "#E0FFE0",
+        "dark": "#C8EBD4",
+        "secondary": "#8BC34A",
+        "tertiary": "#141814",
+        "highlight": "#253025",
+        "textHighlight": "#FF5722"
+      },
+      "lightMode": {
+        "light": "#F0FFF0",
+        "lightgray": "#E3F7E3",
+        "gray": "#A0C8A0",
+        "darkgray": "#3A5A3A",
+        "dark": "#253A25",
+        "secondary": "#689F38",
+        "tertiary": "#FAFFFA",
+        "highlight": "#E7F0E7",
+        "textHighlight": "#9C27B0"
+      }
+    },
+    "Horizon": {
+      "darkMode": {
+        "light": "#1C1E26",
+        "lightgray": "#242630",
+        "gray": "#78809A",
+        "darkgray": "#FADAD1",
+        "dark": "#E7C5A3",
+        "secondary": "#E95678",
+        "tertiary": "#14161C",
+        "highlight": "#3B3F51",
+        "textHighlight": "#A89966"
+      },
+      "lightMode": {
+        "light": "#FAFAFA",
+        "lightgray": "#F0F0F0",
+        "gray": "#AAAAAA",
+        "darkgray": "#1C1E26",
+        "dark": "#444444",
+        "secondary": "#E95678",
+        "tertiary": "#FDFDFD",
+        "highlight": "#E0E0E0",
+        "textHighlight": "#A89966"
+      }
+    },
+    "IndustrialZinc": {
+      "darkMode": {
+        "light": "#1A1A1A",
+        "lightgray": "#303035",
+        "gray": "#6A6A70",
+        "darkgray": "#E0E0E5",
+        "dark": "#D4D4D9",
+        "secondary": "#A8A8A8",
+        "tertiary": "#151515",
+        "highlight": "#25252A",
+        "textHighlight": "#FFC107"
+      },
+      "lightMode": {
+        "light": "#F0F0F0",
+        "lightgray": "#E3E3E8",
+        "gray": "#A8A8B0",
+        "darkgray": "#4A4A50",
+        "dark": "#2E2E33",
+        "secondary": "#909090",
+        "tertiary": "#FAFAFA",
+        "highlight": "#EBEBEB",
+        "textHighlight": "#D81B60"
+      }
+    },
+    "JungleVine": {
+      "darkMode": {
+        "light": "#0A150A",
+        "lightgray": "#1A301A",
+        "gray": "#406A40",
+        "darkgray": "#E0FFE0",
+        "dark": "#C8E8C8",
+        "secondary": "#4CAF50",
+        "tertiary": "#051005",
+        "highlight": "#142514",
+        "textHighlight": "#FF4500"
+      },
+      "lightMode": {
+        "light": "#F0FFF0",
+        "lightgray": "#E3F7E3",
+        "gray": "#A0C8A0",
+        "darkgray": "#2A452A",
+        "dark": "#182A18",
+        "secondary": "#689F38",
+        "tertiary": "#FAFFFA",
+        "highlight": "#E7F0E7",
+        "textHighlight": "#9C27B0"
+      }
+    },
+    "Kanagawa": {
+      "darkMode": {
+        "light": "#1F1F28",
+        "lightgray": "#2A2A37",
+        "gray": "#545468",
+        "darkgray": "#C8C093",
+        "dark": "#DCD7BA",
+        "secondary": "#7FB4CA",
+        "tertiary": "#16161E",
+        "highlight": "#3D4355",
+        "textHighlight": "#E6C384"
+      },
+      "lightMode": {
+        "light": "#F5F3FF",
+        "lightgray": "#E8E6FF",
+        "gray": "#B4B1B7",
+        "darkgray": "#56555C",
+        "dark": "#7C777C",
+        "secondary": "#7FB4CA",
+        "tertiary": "#FFFFFF",
+        "highlight": "#DAD8DD",
+        "textHighlight": "#B55A38"
+      }
+    },
+    "LavenderHaze": {
+      "darkMode": {
+        "light": "#201A25",
+        "lightgray": "#3A3042",
+        "gray": "#756683",
+        "darkgray": "#EFE8F5",
+        "dark": "#DED1E6",
+        "secondary": "#B39DDB",
+        "tertiary": "#18141C",
+        "highlight": "#2B2430",
+        "textHighlight": "#FFEB3B"
+      },
+      "lightMode": {
+        "light": "#FCF9FF",
+        "lightgray": "#F4F0F7",
+        "gray": "#C5B8D0",
+        "darkgray": "#50415D",
+        "dark": "#352A40",
+        "secondary": "#9C27B0",
+        "tertiary": "#FFFFFD",
+        "highlight": "#F0EBF4",
+        "textHighlight": "#E64A19"
+      }
+    },
+    "LavenderHazee": {
+      "darkMode": {
+        "light": "#201A25",
+        "lightgray": "#3A3042",
+        "gray": "#756683",
+        "darkgray": "#EFE8F5",
+        "dark": "#DED1E6",
+        "secondary": "#B39DDB",
+        "tertiary": "#18141C",
+        "highlight": "#2B2430",
+        "textHighlight": "#FFEB3B"
+      },
+      "lightMode": {
+        "light": "#FCF9FF",
+        "lightgray": "#F4F0F7",
+        "gray": "#C5B8D0",
+        "darkgray": "#50415D",
+        "dark": "#352A40",
+        "secondary": "#9C27B0",
+        "tertiary": "#FFFFFD",
+        "highlight": "#F0EBF4",
+        "textHighlight": "#E64A19"
+      }
+    },
+    "LunarDust": {
+      "darkMode": {
+        "light": "#1A1A1A",
+        "lightgray": "#333333",
+        "gray": "#6A6A6A",
+        "darkgray": "#E0E0E0",
+        "dark": "#D4D4D4",
+        "secondary": "#B0B0B0",
+        "tertiary": "#151515",
+        "highlight": "#252525",
+        "textHighlight": "#FFD700"
+      },
+      "lightMode": {
+        "light": "#F5F5F5",
+        "lightgray": "#E8E8E8",
+        "gray": "#B0B0B0",
+        "darkgray": "#4A4A4A",
+        "dark": "#2E2E2E",
+        "secondary": "#808080",
+        "tertiary": "#FFFFFF",
+        "highlight": "#EBEBEB",
+        "textHighlight": "#E91E63"
+      }
+    },
+    "MatrixCode": {
+      "darkMode": {
+        "light": "#000000",
+        "lightgray": "#1A1A1A",
+        "gray": "#303030",
+        "darkgray": "#A3FFBA",
+        "dark": "#00FF00",
+        "secondary": "#00FF00",
+        "tertiary": "#000000",
+        "highlight": "#0A0A0A",
+        "textHighlight": "#D1D1D1"
+      },
+      "lightMode": {
+        "light": "#F0FFF0",
+        "lightgray": "#E3F7E3",
+        "gray": "#9CC89C",
+        "darkgray": "#1A3A1A",
+        "dark": "#001A00",
+        "secondary": "#4CAF50",
+        "tertiary": "#FAFFFA",
+        "highlight": "#E7F0E7",
+        "textHighlight": "#D81B60"
+      }
+    },
+    "MatteBlack": {
+      "darkMode": {
+        "light": "#000000",
+        "lightgray": "#1A1A1A",
+        "gray": "#444444",
+        "darkgray": "#E0E0E0",
+        "dark": "#B0B0B0",
+        "secondary": "#00CED1",
+        "tertiary": "#050505",
+        "highlight": "#222222",
+        "textHighlight": "#FFD700"
+      },
+      "lightMode": {
+        "light": "#FFFFFF",
+        "lightgray": "#F0F0F0",
+        "gray": "#A0A0A0",
+        "darkgray": "#202020",
+        "dark": "#303030",
+        "secondary": "#4682B4",
+        "tertiary": "#FAFAFA",
+        "highlight": "#E0E0E0",
+        "textHighlight": "#FF6347"
+      }
+    },
+    "MiamiVice": {
+      "darkMode": {
+        "light": "#0A0510",
+        "lightgray": "#201030",
+        "gray": "#503070",
+        "darkgray": "#E5F0FF",
+        "dark": "#C8D9E8",
+        "secondary": "#FF00FF",
+        "tertiary": "#05030A",
+        "highlight": "#140A20",
+        "textHighlight": "#00FFFF"
+      },
+      "lightMode": {
+        "light": "#F5FAFF",
+        "lightgray": "#E8F0F5",
+        "gray": "#A0B5C8",
+        "darkgray": "#304050",
+        "dark": "#1A2530",
+        "secondary": "#FF4081",
+        "tertiary": "#FFFFFF",
+        "highlight": "#EBEFF4",
+        "textHighlight": "#00BCD4"
+      }
+    },
+    "Midnight": {
+      "darkMode": {
+        "light": "#000033",
+        "lightgray": "#000066",
+        "gray": "#333399",
+        "darkgray": "#CCCCFF",
+        "dark": "#B3B3FF",
+        "secondary": "#FFCC00",
+        "tertiary": "#00001A",
+        "highlight": "#1A1A4D",
+        "textHighlight": "#66FF66"
+      },
+      "lightMode": {
+        "light": "#FFFFFF",
+        "lightgray": "#F0F0F9",
+        "gray": "#AAAAEE",
+        "darkgray": "#000033",
+        "dark": "#333366",
+        "secondary": "#FF9900",
+        "tertiary": "#FDFDFF",
+        "highlight": "#E0E0E0",
+        "textHighlight": "#0000CC"
+      }
+    },
+    "MidnightBloom": {
+      "darkMode": {
+        "light": "#0F0F23",
+        "lightgray": "#25254A",
+        "gray": "#6A6A9E",
+        "darkgray": "#E0E0FF",
+        "dark": "#D4D4FF",
+        "secondary": "#C850C0",
+        "tertiary": "#08081A",
+        "highlight": "#1A1A3F",
+        "textHighlight": "#FFB84D"
+      },
+      "lightMode": {
+        "light": "#FFFFFF",
+        "lightgray": "#F0F0F5",
+        "gray": "#A0A0B0",
+        "darkgray": "#33334A",
+        "dark": "#1A1A2E",
+        "secondary": "#8A2BE2",
+        "tertiary": "#FAFAFF",
+        "highlight": "#EBEBF0",
+        "textHighlight": "#FF4500"
+      }
+    },
+    "MidnightOil": {
+      "darkMode": {
+        "light": "#10100A",
+        "lightgray": "#2A2A1A",
+        "gray": "#5A5A30",
+        "darkgray": "#E0E0C8",
+        "dark": "#D4D4B8",
+        "secondary": "#FFD700",
+        "tertiary": "#0B0B05",
+        "highlight": "#1C1C14",
+        "textHighlight": "#C850C0"
+      },
+      "lightMode": {
+        "light": "#F5F5E0",
+        "lightgray": "#EBEBE3",
+        "gray": "#C8C8A8",
+        "darkgray": "#404020",
+        "dark": "#25250A",
+        "secondary": "#FFC107",
+        "tertiary": "#FFFDF0",
+        "highlight": "#F0F0D8",
+        "textHighlight": "#4DB6AC"
+      }
+    },
+    "MintJulep": {
+      "darkMode": {
+        "light": "#0A1A1A",
+        "lightgray": "#1A3535",
+        "gray": "#4A7A7A",
+        "darkgray": "#E5FFFF",
+        "dark": "#C8F0F0",
+        "secondary": "#4DB6AC",
+        "tertiary": "#051414",
+        "highlight": "#142525",
+        "textHighlight": "#FFC107"
+      },
+      "lightMode": {
+        "light": "#F5FFFF",
+        "lightgray": "#E8F0F0",
+        "gray": "#A0C8C8",
+        "darkgray": "#305A5A",
+        "dark": "#1A3A3A",
+        "secondary": "#00BCD4",
+        "tertiary": "#FFFFFF",
+        "highlight": "#EBEFF4",
+        "textHighlight": "#E91E63"
+      }
+    },
+    "MistyMoors": {
+      "darkMode": {
+        "light": "#1A1A1D",
+        "lightgray": "#303035",
+        "gray": "#6A6A75",
+        "darkgray": "#E8E8E8",
+        "dark": "#D1D1D4",
+        "secondary": "#9C88B0",
+        "tertiary": "#141418",
+        "highlight": "#25252A",
+        "textHighlight": "#FF9800"
+      },
+      "lightMode": {
+        "light": "#F5F5F8",
+        "lightgray": "#EBEBF0",
+        "gray": "#C8C8D1",
+        "darkgray": "#4A4A55",
+        "dark": "#303035",
+        "secondary": "#A295B5",
+        "tertiary": "#FFFDFE",
+        "highlight": "#F0F0F4",
+        "textHighlight": "#4CAF50"
+      }
+    },
+    "MonokaiPro": {
+      "darkMode": {
+        "light": "#2D2A2E",
+        "lightgray": "#3A3731",
+        "gray": "#6C6A6E",
+        "darkgray": "#FC9867",
+        "dark": "#F8F8F2",
+        "secondary": "#FF6188",
+        "tertiary": "#201E22",
+        "highlight": "#454148",
+        "textHighlight": "#A9DC76"
+      },
+      "lightMode": {
+        "light": "#FAFAF6",
+        "lightgray": "#E8E8E8",
+        "gray": "#B4B4B4",
+        "darkgray": "#3D3A3A",
+        "dark": "#6C6A6E",
+        "secondary": "#FF6188",
+        "tertiary": "#F5F5F0",
+        "highlight": "#EBCB8B",
+        "textHighlight": "#A9DC76"
+      }
+    },
+    "MonsoonSky": {
+      "darkMode": {
+        "light": "#1A1A25",
+        "lightgray": "#303040",
+        "gray": "#656575",
+        "darkgray": "#E0E5E8",
+        "dark": "#D4D9E0",
+        "secondary": "#80A0B0",
+        "tertiary": "#14141E",
+        "highlight": "#252530",
+        "textHighlight": "#FFC107"
+      },
+      "lightMode": {
+        "light": "#F5F5F8",
+        "lightgray": "#EBEBF0",
+        "gray": "#A8A8B0",
+        "darkgray": "#4A4A5A",
+        "dark": "#2E2E35",
+        "secondary": "#78909C",
+        "tertiary": "#FFFDFE",
+        "highlight": "#F0F0F4",
+        "textHighlight": "#E53935"
+      }
+    },
+    "NeptuneAbyss": {
+      "darkMode": {
+        "light": "#0A0A1F",
+        "lightgray": "#1A1A3A",
+        "gray": "#40407A",
+        "darkgray": "#E0E5FF",
+        "dark": "#C8D0E8",
+        "secondary": "#00CCFF",
+        "tertiary": "#050514",
+        "highlight": "#14142A",
+        "textHighlight": "#FF4500"
+      },
+      "lightMode": {
+        "light": "#F5F8FF",
+        "lightgray": "#E8ECF5",
+        "gray": "#A0A8C8",
+        "darkgray": "#303050",
+        "dark": "#1A1A30",
+        "secondary": "#4FC3F7",
+        "tertiary": "#FAFAFF",
+        "highlight": "#EBF0F4",
+        "textHighlight": "#D81B60"
+      }
+    },
+    "Nord": {
+      "darkMode": {
+        "light": "#2E3440",
+        "lightgray": "#3B4252",
+        "gray": "#4C566A",
+        "darkgray": "#88C0D0",
+        "dark": "#D8DEE9",
+        "secondary": "#A3BE8C",
+        "tertiary": "#242933",
+        "highlight": "#434C5E",
+        "textHighlight": "#BF616A"
+      },
+      "lightMode": {
+        "light": "#ECEFF4",
+        "lightgray": "#D8DEE9",
+        "gray": "#A5B2C6",
+        "darkgray": "#4C566A",
+        "dark": "#4C566A",
+        "secondary": "#5E81AC",
+        "tertiary": "#E5E9F0",
+        "highlight": "#B48EAD",
+        "textHighlight": "#8FBCBB"
+      }
+    },
+    "NordicSlate": {
+      "darkMode": {
+        "light": "#1A1D23",
+        "lightgray": "#292E36",
+        "gray": "#657082",
+        "darkgray": "#E0E5EB",
+        "dark": "#D1D8E0",
+        "secondary": "#4CB6FF",
+        "tertiary": "#14161B",
+        "highlight": "#23282F",
+        "textHighlight": "#E91E63"
+      },
+      "lightMode": {
+        "light": "#F7F8FA",
+        "lightgray": "#ECF0F3",
+        "gray": "#AAB5C1",
+        "darkgray": "#444B57",
+        "dark": "#2E343A",
+        "secondary": "#007ACC",
+        "tertiary": "#FFFFFF",
+        "highlight": "#E3E7EB",
+        "textHighlight": "#009688"
+      }
+    },
+    "ObsidianEdge": {
+      "darkMode": {
+        "light": "#000000",
+        "lightgray": "#151515",
+        "gray": "#303030",
+        "darkgray": "#FFFFFF",
+        "dark": "#E0E0E0",
+        "secondary": "#FF00FF",
+        "tertiary": "#000000",
+        "highlight": "#050505",
+        "textHighlight": "#00FFFF"
+      },
+      "lightMode": {
+        "light": "#FFFFFF",
+        "lightgray": "#F0F0F0",
+        "gray": "#A0A0A0",
+        "darkgray": "#1A1A1A",
+        "dark": "#000000",
+        "secondary": "#FF4081",
+        "tertiary": "#FAFAFA",
+        "highlight": "#EBEBEB",
+        "textHighlight": "#2196F3"
+      }
+    },
+    "OceanMist": {
+      "darkMode": {
+        "light": "#0C1F2B",
+        "lightgray": "#1A3A4A",
+        "gray": "#50758A",
+        "darkgray": "#C8E6F0",
+        "dark": "#B0D7E5",
+        "secondary": "#4DB6AC",
+        "tertiary": "#08161E",
+        "highlight": "#152C3B",
+        "textHighlight": "#FFD700"
+      },
+      "lightMode": {
+        "light": "#F0F8FF",
+        "lightgray": "#E1F1FF",
+        "gray": "#9CCAE3",
+        "darkgray": "#1F4E64",
+        "dark": "#0F3A4A",
+        "secondary": "#00BCD4",
+        "tertiary": "#F7FCFF",
+        "highlight": "#E8F4FF",
+        "textHighlight": "#F44336"
+      }
+    },
+    "OceanicNext": {
+      "darkMode": {
+        "light": "#1B2B34",
+        "lightgray": "#343D46",
+        "gray": "#65737E",
+        "darkgray": "#EFC47E",
+        "dark": "#CDD3DE",
+        "secondary": "#4FB8CC",
+        "tertiary": "#13232A",
+        "highlight": "#2C3E50",
+        "textHighlight": "#99C794"
+      },
+      "lightMode": {
+        "light": "#FFFFFF",
+        "lightgray": "#F0F0F0",
+        "gray": "#AAAAAA",
+        "darkgray": "#1B2B34",
+        "dark": "#343D46",
+        "secondary": "#4FB8CC",
+        "tertiary": "#FAFAFA",
+        "highlight": "#E0E0E0",
+        "textHighlight": "#99C794"
+      }
+    },
+    "OneDarkPro": {
+      "darkMode": {
+        "light": "#282C34",
+        "lightgray": "#323842",
+        "gray": "#5C6370",
+        "darkgray": "#E06C75",
+        "dark": "#ABB2BF",
+        "secondary": "#61AFEF",
+        "tertiary": "#21252B",
+        "highlight": "#3E4452",
+        "textHighlight": "#98C379"
+      },
+      "lightMode": {
+        "light": "#FAFAFA",
+        "lightgray": "#F4F4F4",
+        "gray": "#A0A4B0",
+        "darkgray": "#282C34",
+        "dark": "#3F4756",
+        "secondary": "#5C6BC0",
+        "tertiary": "#FDFDFD",
+        "highlight": "#EDEDF0",
+        "textHighlight": "#98C379"
+      }
+    },
+    "OnyxGold": {
+      "darkMode": {
+        "light": "#080808",
+        "lightgray": "#1A1A1A",
+        "gray": "#555555",
+        "darkgray": "#FFF8E1",
+        "dark": "#FFE57F",
+        "secondary": "#FFD700",
+        "tertiary": "#000000",
+        "highlight": "#101010",
+        "textHighlight": "#00FF7F"
+      },
+      "lightMode": {
+        "light": "#FFFCEF",
+        "lightgray": "#F5F0E0",
+        "gray": "#D9C7A1",
+        "darkgray": "#5A4A25",
+        "dark": "#30250A",
+        "secondary": "#FFC107",
+        "tertiary": "#FFFFF5",
+        "highlight": "#F0EBD8",
+        "textHighlight": "#E91E63"
+      }
+    },
+    "OsakaJade": {
+      "darkMode": {
+        "light": "#0B0C10",
+        "lightgray": "#1D1F23",
+        "gray": "#4A4D53",
+        "darkgray": "#A8A8A8",
+        "dark": "#E0E0E0",
+        "secondary": "#00A39E",
+        "tertiary": "#050608",
+        "highlight": "#2A2C31",
+        "textHighlight": "#00FF7F"
+      },
+      "lightMode": {
+        "light": "#FFFFFF",
+        "lightgray": "#F0F0F0",
+        "gray": "#AAAAAA",
+        "darkgray": "#222222",
+        "dark": "#444444",
+        "secondary": "#008B8B",
+        "tertiary": "#FAFAFA",
+        "highlight": "#E0E0E0",
+        "textHighlight": "#3CB371"
+      }
+    },
+    "Outrun": {
+      "darkMode": {
+        "light": "#1D1E3E",
+        "lightgray": "#3A1B40",
+        "gray": "#7D4E8A",
+        "darkgray": "#FFC2FF",
+        "dark": "#DCD7BA",
+        "secondary": "#FF5D95",
+        "tertiary": "#161633",
+        "highlight": "#572B62",
+        "textHighlight": "#00FFFF"
+      },
+      "lightMode": {
+        "light": "#FFFFFF",
+        "lightgray": "#F0F0F0",
+        "gray": "#AAAAAA",
+        "darkgray": "#1D1E3E",
+        "dark": "#444444",
+        "secondary": "#FF5D95",
+        "tertiary": "#FAFAFA",
+        "highlight": "#E0E0E0",
+        "textHighlight": "#FFC2FF"
+      }
+    },
+    "Palenight": {
+      "darkMode": {
+        "light": "#292D3E",
+        "lightgray": "#444B6A",
+        "gray": "#8796B0",
+        "darkgray": "#C792EA",
+        "dark": "#A6ACCD",
+        "secondary": "#FFCB6B",
+        "tertiary": "#212530",
+        "highlight": "#363A53",
+        "textHighlight": "#C3E88D"
+      },
+      "lightMode": {
+        "light": "#FFFFFF",
+        "lightgray": "#F0F0F0",
+        "gray": "#9CA3AF",
+        "darkgray": "#292D3E",
+        "dark": "#444B6A",
+        "secondary": "#FFCB6B",
+        "tertiary": "#F9FAFB",
+        "highlight": "#E5E7EB",
+        "textHighlight": "#C792EA"
+      }
+    },
+    "PetrifiedWood": {
+      "darkMode": {
+        "light": "#25201A",
+        "lightgray": "#3A352E",
+        "gray": "#756A5A",
+        "darkgray": "#EBE8E0",
+        "dark": "#D1C8B8",
+        "secondary": "#9C8A6B",
+        "tertiary": "#1C1814",
+        "highlight": "#302B25",
+        "textHighlight": "#FF5722"
+      },
+      "lightMode": {
+        "light": "#F8F5F0",
+        "lightgray": "#EFEBE3",
+        "gray": "#C8C0B5",
+        "darkgray": "#504A40",
+        "dark": "#353028",
+        "secondary": "#A89A80",
+        "tertiary": "#FFFDF8",
+        "highlight": "#E7E3D8",
+        "textHighlight": "#007ACC"
+      }
+    },
+    "PlumWine": {
+      "darkMode": {
+        "light": "#251020",
+        "lightgray": "#402A35",
+        "gray": "#80556B",
+        "darkgray": "#F5E0EB",
+        "dark": "#E0C8D9",
+        "secondary": "#9C27B0",
+        "tertiary": "#1C0B18",
+        "highlight": "#301B28",
+        "textHighlight": "#FFEB3B"
+      },
+      "lightMode": {
+        "light": "#FFF8FC",
+        "lightgray": "#F5E8F0",
+        "gray": "#C8A0C0",
+        "darkgray": "#5A3048",
+        "dark": "#3A1A2E",
+        "secondary": "#7B1FA2",
+        "tertiary": "#FFFCFF",
+        "highlight": "#F0E4EC",
+        "textHighlight": "#009688"
+      }
+    },
+    "RetroWave": {
+      "darkMode": {
+        "light": "#0F0A15",
+        "lightgray": "#251535",
+        "gray": "#5A407A",
+        "darkgray": "#F0E0FF",
+        "dark": "#D9C8E8",
+        "secondary": "#FF00AA",
+        "tertiary": "#0B0710",
+        "highlight": "#1C1425",
+        "textHighlight": "#00CCFF"
+      },
+      "lightMode": {
+        "light": "#FFF8FF",
+        "lightgray": "#F5E8F5",
+        "gray": "#C8A0D9",
+        "darkgray": "#40305A",
+        "dark": "#251A35",
+        "secondary": "#9C27B0",
+        "tertiary": "#FFFCFF",
+        "highlight": "#F0E4F0",
+        "textHighlight": "#FFC107"
+      }
+    },
+    "RosePine": {
+      "darkMode": {
+        "light": "#191724",
+        "lightgray": "#21202E",
+        "gray": "#6E6A86",
+        "darkgray": "#E0DEF4",
+        "dark": "#EDECEF",
+        "secondary": "#eb6f92",
+        "tertiary": "#13111B",
+        "highlight": "#3E3C57",
+        "textHighlight": "#F6C177"
+      },
+      "lightMode": {
+        "light": "#FAF4ED",
+        "lightgray": "#F2F0EC",
+        "gray": "#9893A5",
+        "darkgray": "#575268",
+        "dark": "#6F6C7D",
+        "secondary": "#D7827E",
+        "tertiary": "#FFFDFB",
+        "highlight": "#FBE6D3",
+        "textHighlight": "#907AA9"
+      }
+    },
+    "RoyalVelvet": {
+      "darkMode": {
+        "light": "#1F0F23",
+        "lightgray": "#3A2042",
+        "gray": "#754B83",
+        "darkgray": "#F0E5FF",
+        "dark": "#D9C8E8",
+        "secondary": "#E0B612",
+        "tertiary": "#160B1B",
+        "highlight": "#2A1A31",
+        "textHighlight": "#00FF7F"
+      },
+      "lightMode": {
+        "light": "#FFF8FD",
+        "lightgray": "#F3E8F5",
+        "gray": "#C8A0D9",
+        "darkgray": "#502864",
+        "dark": "#381E45",
+        "secondary": "#9C27B0",
+        "tertiary": "#FFFCFF",
+        "highlight": "#EBE3F0",
+        "textHighlight": "#FF5722"
+      }
+    },
+    "RubyGlow": {
+      "darkMode": {
+        "light": "#1A050A",
+        "lightgray": "#35141A",
+        "gray": "#7A404A",
+        "darkgray": "#FFEBEB",
+        "dark": "#E8D0D4",
+        "secondary": "#E91E63",
+        "tertiary": "#14080B",
+        "highlight": "#251015",
+        "textHighlight": "#4DB6AC"
+      },
+      "lightMode": {
+        "light": "#FFF5F5",
+        "lightgray": "#F5E8E8",
+        "gray": "#D9A0A8",
+        "darkgray": "#5A3035",
+        "dark": "#3A1A1E",
+        "secondary": "#C62828",
+        "tertiary": "#FFFCFD",
+        "highlight": "#F0EBEB",
+        "textHighlight": "#FF9800"
+      }
+    },
+    "RustyIron": {
+      "darkMode": {
+        "light": "#2A1E1E",
+        "lightgray": "#453030",
+        "gray": "#805050",
+        "darkgray": "#F0E0E0",
+        "dark": "#D9C8C8",
+        "secondary": "#B84040",
+        "tertiary": "#201717",
+        "highlight": "#352828",
+        "textHighlight": "#80A0B0"
+      },
+      "lightMode": {
+        "light": "#FFF8F8",
+        "lightgray": "#F5EBEB",
+        "gray": "#C7A8A8",
+        "darkgray": "#5A3030",
+        "dark": "#3A1E1E",
+        "secondary": "#993333",
+        "tertiary": "#FFFCFC",
+        "highlight": "#F0E4E4",
+        "textHighlight": "#4CAF50"
+      }
+    },
+    "SaffronSpice": {
+      "darkMode": {
+        "light": "#201A10",
+        "lightgray": "#3A301E",
+        "gray": "#7A6540",
+        "darkgray": "#FFF0E0",
+        "dark": "#E8D4C0",
+        "secondary": "#FFB300",
+        "tertiary": "#18140B",
+        "highlight": "#2B2414",
+        "textHighlight": "#9C27B0"
+      },
+      "lightMode": {
+        "light": "#FFFCE7",
+        "lightgray": "#FFF5CC",
+        "gray": "#E0D080",
+        "darkgray": "#5A4A1E",
+        "dark": "#3A2E05",
+        "secondary": "#FF8F00",
+        "tertiary": "#FFFFF0",
+        "highlight": "#FFF7E0",
+        "textHighlight": "#D32F2F"
+      }
+    },
+    "SageWhisper": {
+      "darkMode": {
+        "light": "#151A10",
+        "lightgray": "#2A3520",
+        "gray": "#607550",
+        "darkgray": "#F0FFF5",
+        "dark": "#D9E8D0",
+        "secondary": "#A2CF6E",
+        "tertiary": "#10140A",
+        "highlight": "#202518",
+        "textHighlight": "#FF9800"
+      },
+      "lightMode": {
+        "light": "#F5FFF5",
+        "lightgray": "#E8F5E8",
+        "gray": "#B5C8B5",
+        "darkgray": "#405A40",
+        "dark": "#253A25",
+        "secondary": "#8BC34A",
+        "tertiary": "#FAFFFA",
+        "highlight": "#EBF0EB",
+        "textHighlight": "#D81B60"
+      }
+    },
+    "ShadesOfPurple": {
+      "darkMode": {
+        "light": "#2D2B55",
+        "lightgray": "#414798",
+        "gray": "#6394F8",
+        "darkgray": "#FAD000",
+        "dark": "#FFFFFF",
+        "secondary": "#FF77AA",
+        "tertiary": "#242240",
+        "highlight": "#545199",
+        "textHighlight": "#A5FFFE"
+      },
+      "lightMode": {
+        "light": "#FFFFFF",
+        "lightgray": "#F0F0F0",
+        "gray": "#AAAAAA",
+        "darkgray": "#2D2B55",
+        "dark": "#414798",
+        "secondary": "#FF77AA",
+        "tertiary": "#FDFDFF",
+        "highlight": "#E0E0E0",
+        "textHighlight": "#FAD000"
+      }
+    },
+    "SilentNight": {
+      "darkMode": {
+        "light": "#0A1015",
+        "lightgray": "#1A252E",
+        "gray": "#4A607A",
+        "darkgray": "#E5F0FF",
+        "dark": "#C8D9E8",
+        "secondary": "#80DEEA",
+        "tertiary": "#05080A",
+        "highlight": "#141D25",
+        "textHighlight": "#FF9800"
+      },
+      "lightMode": {
+        "light": "#F5FAFF",
+        "lightgray": "#E8F0F5",
+        "gray": "#A0B5C8",
+        "darkgray": "#304050",
+        "dark": "#1A2530",
+        "secondary": "#00BCD4",
+        "tertiary": "#FFFFFF",
+        "highlight": "#EBEFF4",
+        "textHighlight": "#E91E63"
+      }
+    },
+    "SilverStream": {
+      "darkMode": {
+        "light": "#101015",
+        "lightgray": "#252530",
+        "gray": "#6A6A7A",
+        "darkgray": "#E0E0E5",
+        "dark": "#D4D4D9",
+        "secondary": "#B0B0C8",
+        "tertiary": "#08080C",
+        "highlight": "#1A1A20",
+        "textHighlight": "#FFD700"
+      },
+      "lightMode": {
+        "light": "#FFFFFF",
+        "lightgray": "#F0F0F5",
+        "gray": "#A0A0B0",
+        "darkgray": "#33334A",
+        "dark": "#1A1A2E",
+        "secondary": "#808099",
+        "tertiary": "#FAFAFF",
+        "highlight": "#EBEBF0",
+        "textHighlight": "#E91E63"
+      }
+    },
+    "SolarFlare": {
+      "darkMode": {
+        "light": "#1E1E1E",
+        "lightgray": "#3A3A3A",
+        "gray": "#8C8C8C",
+        "darkgray": "#FFFDD0",
+        "dark": "#FFEEA5",
+        "secondary": "#FF9800",
+        "tertiary": "#151515",
+        "highlight": "#2B2B2B",
+        "textHighlight": "#4CAF50"
+      },
+      "lightMode": {
+        "light": "#FFFFE0",
+        "lightgray": "#FFFACD",
+        "gray": "#E0D080",
+        "darkgray": "#5A5A2B",
+        "dark": "#404018",
+        "secondary": "#FF5722",
+        "tertiary": "#FFFFF0",
+        "highlight": "#FFF7BF",
+        "textHighlight": "#2196F3"
+      }
+    },
+    "SolarFlaree": {
+      "darkMode": {
+        "light": "#1E1E1E",
+        "lightgray": "#3A3A3A",
+        "gray": "#8C8C8C",
+        "darkgray": "#FFFDD0",
+        "dark": "#FFEEA5",
+        "secondary": "#FF9800",
+        "tertiary": "#151515",
+        "highlight": "#2B2B2B",
+        "textHighlight": "#4CAF50"
+      },
+      "lightMode": {
+        "light": "#FFFFE0",
+        "lightgray": "#FFFACD",
+        "gray": "#E0D080",
+        "darkgray": "#5A5A2B",
+        "dark": "#404018",
+        "secondary": "#FF5722",
+        "tertiary": "#FFFFF0",
+        "highlight": "#FFF7BF",
+        "textHighlight": "#2196F3"
+      }
+    },
+    "SolarizedDark": {
+      "darkMode": {
+        "light": "#002B36",
+        "lightgray": "#073642",
+        "gray": "#586E75",
+        "darkgray": "#93A1A1",
+        "dark": "#839496",
+        "secondary": "#268BD2",
+        "tertiary": "#00212B",
+        "highlight": "#0A4250",
+        "textHighlight": "#B58900"
+      },
+      "lightMode": {
+        "light": "#FDF6E3",
+        "lightgray": "#EEE8D5",
+        "gray": "#839496",
+        "darkgray": "#586E75",
+        "dark": "#657B83",
+        "secondary": "#268BD2",
+        "tertiary": "#FCF6E0",
+        "highlight": "#EDEDD5",
+        "textHighlight": "#DC322F"
+      }
+    },
+    "SteampunkGears": {
+      "darkMode": {
+        "light": "#281810",
+        "lightgray": "#453020",
+        "gray": "#8A604A",
+        "darkgray": "#F5E5D5",
+        "dark": "#E0C9B0",
+        "secondary": "#FF9800",
+        "tertiary": "#1E120B",
+        "highlight": "#35251C",
+        "textHighlight": "#4CAF50"
+      },
+      "lightMode": {
+        "light": "#FFF8F0",
+        "lightgray": "#F5EADF",
+        "gray": "#C7B9A1",
+        "darkgray": "#5A3A20",
+        "dark": "#3A2510",
+        "secondary": "#B87333",
+        "tertiary": "#FFFCF9",
+        "highlight": "#F0E5D7",
+        "textHighlight": "#9C27B0"
+      }
+    },
+    "StoneMason": {
+      "darkMode": {
+        "light": "#1A1A1A",
+        "lightgray": "#303030",
+        "gray": "#6A6A6A",
+        "darkgray": "#E0E0E0",
+        "dark": "#D4D4D4",
+        "secondary": "#A8A8A8",
+        "tertiary": "#151515",
+        "highlight": "#252525",
+        "textHighlight": "#4DB6AC"
+      },
+      "lightMode": {
+        "light": "#F5F5F5",
+        "lightgray": "#EBEBEB",
+        "gray": "#B0B0B0",
+        "darkgray": "#4A4A4A",
+        "dark": "#2E2E2E",
+        "secondary": "#999999",
+        "tertiary": "#FFFFFF",
+        "highlight": "#EBEBEB",
+        "textHighlight": "#FF9800"
+      }
+    },
+    "SunkenCity": {
+      "darkMode": {
+        "light": "#0F1A1A",
+        "lightgray": "#2A3535",
+        "gray": "#556A6A",
+        "darkgray": "#E0F0F0",
+        "dark": "#C8D9D9",
+        "secondary": "#FF8A65",
+        "tertiary": "#0A1414",
+        "highlight": "#1A2525",
+        "textHighlight": "#2196F3"
+      },
+      "lightMode": {
+        "light": "#F0F5F5",
+        "lightgray": "#E3EBEB",
+        "gray": "#A0B0B0",
+        "darkgray": "#3A4A4A",
+        "dark": "#253030",
+        "secondary": "#F4511E",
+        "tertiary": "#FAFCFC",
+        "highlight": "#E7EFEF",
+        "textHighlight": "#9C27B0"
+      }
+    },
+    "Tender": {
+      "darkMode": {
+        "light": "#282A36",
+        "lightgray": "#3D4252",
+        "gray": "#6E7587",
+        "darkgray": "#E0E0E0",
+        "dark": "#D0D0D0",
+        "secondary": "#FFAE57",
+        "tertiary": "#20222B",
+        "highlight": "#4F5566",
+        "textHighlight": "#8FD878"
+      },
+      "lightMode": {
+        "light": "#FFFFFF",
+        "lightgray": "#F5F5F5",
+        "gray": "#A0A0A0",
+        "darkgray": "#282A36",
+        "dark": "#4F5566",
+        "secondary": "#FF6188",
+        "tertiary": "#FAFAFA",
+        "highlight": "#E0E0E0",
+        "textHighlight": "#FFAE57"
+      }
+    },
+    "TerraCotta": {
+      "darkMode": {
+        "light": "#25100A",
+        "lightgray": "#402514",
+        "gray": "#805035",
+        "darkgray": "#FFE0D9",
+        "dark": "#E8C8B8",
+        "secondary": "#F44336",
+        "tertiary": "#1C0B05",
+        "highlight": "#301B14",
+        "textHighlight": "#9CCC6B"
+      },
+      "lightMode": {
+        "light": "#FFF8F5",
+        "lightgray": "#F5EBE8",
+        "gray": "#D1A8A0",
+        "darkgray": "#5A302A",
+        "dark": "#3A1E1A",
+        "secondary": "#E57373",
+        "tertiary": "#FFFCFC",
+        "highlight": "#F0E4E1",
+        "textHighlight": "#2196F3"
+      }
+    },
+    "TidalPool": {
+      "darkMode": {
+        "light": "#0A1520",
+        "lightgray": "#1A3040",
+        "gray": "#407080",
+        "darkgray": "#E0F5F5",
+        "dark": "#C8D9D9",
+        "secondary": "#26A69A",
+        "tertiary": "#05101A",
+        "highlight": "#142530",
+        "textHighlight": "#FFD700"
+      },
+      "lightMode": {
+        "light": "#F0F8F8",
+        "lightgray": "#E3F0F0",
+        "gray": "#9CC8C8",
+        "darkgray": "#2A4545",
+        "dark": "#182A2A",
+        "secondary": "#00BCD4",
+        "tertiary": "#F7FCFC",
+        "highlight": "#E8F0F0",
+        "textHighlight": "#E53935"
+      }
+    },
+    "TidalWave": {
+      "darkMode": {
+        "light": "#00101C",
+        "lightgray": "#002030",
+        "gray": "#005F9A",
+        "darkgray": "#9DD9FF",
+        "dark": "#D6F0FF",
+        "secondary": "#5AF2FF",
+        "tertiary": "#000810",
+        "highlight": "#003A5C",
+        "textHighlight": "#FFC13A"
+      },
+      "lightMode": {
+        "light": "#FFFFFF",
+        "lightgray": "#F0F8FF",
+        "gray": "#A0C8D9",
+        "darkgray": "#00101C",
+        "dark": "#002030",
+        "secondary": "#007ACC",
+        "tertiary": "#FDFDFF",
+        "highlight": "#E0E0E0",
+        "textHighlight": "#5AF2FF"
+      }
+    },
+    "TokyoNight": {
+      "darkMode": {
+        "light": "#1A1B26",
+        "lightgray": "#24283B",
+        "gray": "#414868",
+        "darkgray": "#C0CAF5",
+        "dark": "#A9B1D6",
+        "secondary": "#7DCFFF",
+        "tertiary": "#16161E",
+        "highlight": "#353A52",
+        "textHighlight": "#9ECE6A"
+      },
+      "lightMode": {
+        "light": "#FFFFFF",
+        "lightgray": "#F3F4F6",
+        "gray": "#9CA3AF",
+        "darkgray": "#1F2937",
+        "dark": "#374151",
+        "secondary": "#10B981",
+        "tertiary": "#F9FAFB",
+        "highlight": "#E5E7EB",
+        "textHighlight": "#9333EA"
+      }
+    },
+    "TwilightMauve": {
+      "darkMode": {
+        "light": "#1A1020",
+        "lightgray": "#301E3A",
+        "gray": "#6A407A",
+        "darkgray": "#EBE0F5",
+        "dark": "#D9C8E0",
+        "secondary": "#C850C0",
+        "tertiary": "#140C1A",
+        "highlight": "#25182B",
+        "textHighlight": "#FFD700"
+      },
+      "lightMode": {
+        "light": "#FFF8FC",
+        "lightgray": "#F5EBF0",
+        "gray": "#C8A8C0",
+        "darkgray": "#4A305A",
+        "dark": "#2E1E35",
+        "secondary": "#9C27B0",
+        "tertiary": "#FFFCFF",
+        "highlight": "#F0E4EC",
+        "textHighlight": "#4DB6AC"
+      }
+    },
+    "VSCodeDark": {
+      "darkMode": {
+        "light": "#1E1E1E",
+        "lightgray": "#252526",
+        "gray": "#424242",
+        "darkgray": "#9CDCFE",
+        "dark": "#D4D4D4",
+        "secondary": "#569CD6",
+        "tertiary": "#151515",
+        "highlight": "#333333",
+        "textHighlight": "#B5CEA8"
+      },
+      "lightMode": {
+        "light": "#FFFFFF",
+        "lightgray": "#EDEDED",
+        "gray": "#909090",
+        "darkgray": "#1E1E1E",
+        "dark": "#333333",
+        "secondary": "#007ACC",
+        "tertiary": "#FDFDFD",
+        "highlight": "#E0E0E0",
+        "textHighlight": "#008000"
+      }
+    },
+    "VaporwaveSunset": {
+      "darkMode": {
+        "light": "#0A0A1A",
+        "lightgray": "#251535",
+        "gray": "#5A407A",
+        "darkgray": "#F0E0FF",
+        "dark": "#D9C8E8",
+        "secondary": "#FF00AA",
+        "tertiary": "#050510",
+        "highlight": "#1C1425",
+        "textHighlight": "#00FFFF"
+      },
+      "lightMode": {
+        "light": "#FFF8FF",
+        "lightgray": "#F5E8F5",
+        "gray": "#C8A0D9",
+        "darkgray": "#40305A",
+        "dark": "#251A35",
+        "secondary": "#E91E63",
+        "tertiary": "#FFFCFF",
+        "highlight": "#F0E4F0",
+        "textHighlight": "#FFC107"
+      }
+    },
+    "VintageSepia": {
+      "darkMode": {
+        "light": "#352A20",
+        "lightgray": "#504030",
+        "gray": "#9A8065",
+        "darkgray": "#FFF8E0",
+        "dark": "#E0D1B8",
+        "secondary": "#C0A060",
+        "tertiary": "#2A2018",
+        "highlight": "#403328",
+        "textHighlight": "#5DADE4"
+      },
+      "lightMode": {
+        "light": "#FFF5E0",
+        "lightgray": "#F5EAD9",
+        "gray": "#D1BFA8",
+        "darkgray": "#5A4A35",
+        "dark": "#3A3020",
+        "secondary": "#B8860B",
+        "tertiary": "#FFFCF0",
+        "highlight": "#F0E4D3",
+        "textHighlight": "#D32F2F"
+      }
+    },
+    "WarmCanyon": {
+      "darkMode": {
+        "light": "#331D1A",
+        "lightgray": "#55302A",
+        "gray": "#9E655B",
+        "darkgray": "#FFEBD9",
+        "dark": "#D9C0B3",
+        "secondary": "#E05A3A",
+        "tertiary": "#2A1816",
+        "highlight": "#402521",
+        "textHighlight": "#5DADE4"
+      },
+      "lightMode": {
+        "light": "#FFF8F0",
+        "lightgray": "#F5EBE0",
+        "gray": "#C7A899",
+        "darkgray": "#55302A",
+        "dark": "#3D231C",
+        "secondary": "#D96B4E",
+        "tertiary": "#FFFCF8",
+        "highlight": "#F0E3D3",
+        "textHighlight": "#2C3E50"
+      }
+    },
+    "WastelandFog": {
+      "darkMode": {
+        "light": "#1A1A10",
+        "lightgray": "#303020",
+        "gray": "#6A6A4A",
+        "darkgray": "#E8E8C0",
+        "dark": "#D1D1A0",
+        "secondary": "#8BC34A",
+        "tertiary": "#14140B",
+        "highlight": "#252518",
+        "textHighlight": "#E91E63"
+      },
+      "lightMode": {
+        "light": "#F5F5E0",
+        "lightgray": "#EBEBE3",
+        "gray": "#C8C8A8",
+        "darkgray": "#505030",
+        "dark": "#35351A",
+        "secondary": "#9CCC6B",
+        "tertiary": "#FFFDF0",
+        "highlight": "#F0F0D8",
+        "textHighlight": "#FF9800"
+      }
+    },
+    "WornLeather": {
+      "darkMode": {
+        "light": "#2A1A10",
+        "lightgray": "#45301E",
+        "gray": "#806040",
+        "darkgray": "#FFE5CC",
+        "dark": "#E0C8A8",
+        "secondary": "#A1887F",
+        "tertiary": "#20140A",
+        "highlight": "#352814",
+        "textHighlight": "#9CCC6B"
+      },
+      "lightMode": {
+        "light": "#FFF8F0",
+        "lightgray": "#F5EBE0",
+        "gray": "#D1C0A8",
+        "darkgray": "#644A30",
+        "dark": "#3A2E1A",
+        "secondary": "#8D6E63",
+        "tertiary": "#FFFCF8",
+        "highlight": "#F0E4D3",
+        "textHighlight": "#2196F3"
+      }
+    },
+    "ZenGarden": {
+      "darkMode": {
+        "light": "#1A1A1A",
+        "lightgray": "#333333",
+        "gray": "#6A6A6A",
+        "darkgray": "#F0F5E0",
+        "dark": "#D9E0C7",
+        "secondary": "#8BC34A",
+        "tertiary": "#151515",
+        "highlight": "#252525",
+        "textHighlight": "#FFC107"
+      },
+      "lightMode": {
+        "light": "#F8FFF0",
+        "lightgray": "#EAF5E3",
+        "gray": "#B5C8A8",
+        "darkgray": "#405A30",
+        "dark": "#2A3A20",
+        "secondary": "#689F38",
+        "tertiary": "#FFFFFF",
+        "highlight": "#EBEFE6",
+        "textHighlight": "#D81B60"
+      }
+    }
+  }
+}
